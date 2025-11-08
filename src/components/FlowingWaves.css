@@ -1,0 +1,74 @@
+/* FlowingWaves.css */
+
+/* Ribbons: slide up on load, then gently sway horizontally */
+@keyframes slideUp {
+  0% { transform: translateY(100%); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes sway {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-40px); }
+  100% { transform: translateX(0); }
+}
+
+.wave-animation-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0; /* behind content */
+  pointer-events: none; /* don't block interactions */
+}
+
+/* Base style becomes a ribbon band instead of a full-screen bar */
+.wave-layer {
+  position: absolute;
+  left: -10%;
+  width: 120%;
+  border-radius: 9999px; /* pill shape */
+  filter: blur(0.4px); /* soften edges slightly */
+  opacity: 1;
+  /* Two animations: 1) slide up on load, 2) horizontal sway loop */
+  animation: slideUp 900ms ease-out forwards, sway 18s ease-in-out 900ms infinite;
+}
+
+/* --- Specific Ribbon Layers (stacked from back to front) --- */
+.white {
+  height: 18%;
+  bottom: 12%;
+  z-index: 1;
+  background: linear-gradient(180deg, #ffffff 0%, #f3f4f6 100%);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  animation-duration: 900ms, 22s; /* slideUp, sway */
+  animation-delay: 0ms, 900ms;
+  opacity: 0.9;
+}
+
+.dark-solid {
+  height: 22%;
+  bottom: 6%;
+  z-index: 2;
+  background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+  animation-duration: 1000ms, 20s;
+  animation-delay: 120ms, 1000ms;
+}
+
+.dark-textured {
+  height: 26%;
+  bottom: -2%;
+  z-index: 3;
+  background: repeating-linear-gradient(
+    135deg,
+    #111 0px,
+    #111 6px,
+    #1d1d1d 6px,
+    #1d1d1d 12px
+  );
+  box-shadow: 0 14px 36px rgba(0,0,0,0.18);
+  animation-duration: 1100ms, 18s;
+  animation-delay: 220ms, 1100ms;
+  opacity: 0.95;
+}
