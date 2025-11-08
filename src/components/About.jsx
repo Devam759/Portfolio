@@ -8,7 +8,7 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="about" className="py-16 md:py-20 lg:py-24 bg-[url('/images/bg-about1.png')] bg-cover bg-center bg-no-repeat">
+    <section id="about" className="py-16 md:py-20 lg:py-24 bg-[url('/images/bg-about2.png')] bg-cover bg-center bg-no-repeat">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <motion.div
           ref={ref}

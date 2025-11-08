@@ -1,25 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
+import TextType from './TextType'
 import FlowingWaves from './FlowingWaves'
 
 
 // Helper component for skill tags
 export default function Hero() {
-  const prefix = "I'm ";
-  const fullName = 'Devam Gupta';
-  const totalLen = prefix.length + fullName.length;
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    if (count < totalLen) {
-      const t = setTimeout(() => setCount((c) => c + 1), 90);
-      return () => clearTimeout(t);
-    }
-  }, [count, totalLen]);
-
-  const shownPrefix = prefix.slice(0, Math.min(count, prefix.length));
-  const nameChars = Math.max(0, count - prefix.length);
-  const shownName = fullName.slice(0, Math.min(nameChars, fullName.length));
   return (
     <section 
       id="home" 
@@ -37,11 +23,17 @@ export default function Hero() {
           — Hello There!
         </p>
         
-        {/* Main Title with typing animation */}
+        {/* Main Title */}
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight mb-12 font-display">
-          {shownPrefix}
-          <span className="text-black">{shownName}</span>
-          <span className="inline-block w-[2px] h-[1em] align-[-0.1em] bg-black ml-1 animate-pulse" />
+          <TextType
+            text={["I'm Devam Gupta"]}
+            as="span"
+            className="text-black"
+            typingSpeed={100}
+            initialDelay={500}
+            cursorCharacter="|"
+            style={{ fontFamily: "'Momo Trust Display', sans-serif" }}
+          />
         </h1>
       </motion.div>
 

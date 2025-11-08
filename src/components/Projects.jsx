@@ -8,11 +8,11 @@ const projects = [
     id: 1,
     title: 'VISTA',
     description:
-      'A smart hostel attendance management system that digitizes student check-ins, ensuring accuracy, transparency, and ease for both students and wardens.',
+      'A smart hostel attendance system that digitizes student check-ins, ensuring accuracy, and ease for both students and wardens.',
     stack: ['React', 'Node.js', 'MySQL', 'Tailwind'],
     image: '/images/projects/VISTA.png',
-    live: '#',
-    github: '#',
+    live: 'https://vista-ten-snowy.vercel.app/',
+    github: 'https://github.com/Devam759/VISTA.git',
   },
   {
     id: 2,
@@ -21,18 +21,18 @@ const projects = [
       'A streamlined platform that connects tailors and customers, enabling effortless clothing customization and order management.',
     stack: ['React', 'Express.js', 'MongoDB', 'Tailwind'],
     image: '/images/projects/StitchUp.png',
-    live: '#',
-    github: '#',
+    live: 'https://stitchup.vercel.app/',
+    github: 'https://github.com/ParthDhoot27/stichUP.git',
   },
   {
     id: 3,
     title: "SABRANG'25",
     description:
       "a vibrant event website crafted with a dynamic and responsive frontend to showcase JKLU's college’s annual cultural fest.",
-    stack: ['React', 'API Integration', 'Tailwind'],
+    stack: ['React', 'Next.js', 'Tailwind'],
     image: '/images/projects/SABRANG.png',
-    live: '#',
-    github: '#',
+    live: 'https://sabrang25-first-draft.vercel.app/',
+    github: 'https://github.com/suryaansh001/Sabrang25First_Draft.git',
   },
   {
     id: 4,
@@ -41,8 +41,8 @@ const projects = [
       'An engaging and visually appealing frontend developed to represent our college’s freshers’ event with a modern, user-friendly design.',
     stack: ['HTML', 'CSS', 'JS'],
     image: '/images/projects/AARAMBH.png',
-    live: '#',
-    github: '#',
+    live: 'https://aarambh-demo.vercel.app/',
+    github: 'https://github.com/aman67032/aarambh_demo.git',
   },
   {
     id: 5,
@@ -51,8 +51,8 @@ const projects = [
       'A self-designed UI project aimed at enhancing the user experience and interface of a hackathon conducting brand.',
     stack: ['React', 'Framer Motion', 'Tailwind'],
     image: '/images/projects/Hackers_Unity.png',
-    live: '#',
-    github: '#',
+    live: 'https://hackers-unity.vercel.app/',
+    github: 'https://github.com/Devam759/Hackers-Unity.git',
   },
   {
     id: 6,
@@ -61,8 +61,8 @@ const projects = [
       'a personal frontend project focused on redesigning and modernizing the UI of a cultural fashion brand.',
     stack: ['React', 'Next.js', 'Tailwind'],
     image: '/images/projects/Anokhi.png',
-    live: '#',
-    github: '#',
+    live: 'https://anokhi.vercel.app/',
+    github: 'https://github.com/Devam759/Anokhi.git',
   },
 ]
 
@@ -91,39 +91,46 @@ export default function Projects() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100"
+              className="group bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-black"
             >
+              {/* Top accent bar */}
+              <div className="h-1 w-full bg-black/80" />
+
               {project.image ? (
-                <img src={project.image} alt={`${project.title} project screenshot`} className="h-48 w-full object-cover" />
+                <img
+                  src={project.image}
+                  alt={`${project.title} project screenshot`}
+                  className="h-48 w-full object-cover transition-all duration-300 saturate-0 group-hover:saturate-100"
+                />
               ) : (
-                <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200"></div>
+                <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200" />
               )}
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-3 font-display text-black">{project.title}</h3>
+                <h3 className="text-xl font-semibold mb-3 font-display text-black tracking-tight">{project.title}</h3>
                 <p className="text-gray-600 mb-4 text-sm leading-relaxed font-sans">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-5">
                   {project.stack.map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-gray-100 text-xs font-medium text-gray-700 rounded-full font-sans">
+                    <span key={tech} className="px-3 py-1 bg-gray-100 text-xs font-medium text-gray-800 border border-gray-200 font-sans">
                       {tech}
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-4 pt-2 border-t border-gray-100">
-                  <a
-                    href={project.live || '#'}
-                    className="text-sm font-medium text-black hover:text-gray-600 transition-colors font-sans cursor-target"
-                    target="_blank" rel="noopener noreferrer"
-                  >
-                    View Project →
-                  </a>
+                <div className="flex items-center justify-between pt-2 border-t border-gray-100">
                   <a
                     href={project.github || '#'}
                     className="text-sm font-medium text-black hover:text-gray-600 transition-colors font-sans cursor-target"
                     target="_blank" rel="noopener noreferrer"
                   >
-                    GitHub →
+                    GITHUB
+                  </a>
+                  <a
+                    href={project.live || '#'}
+                    className="text-sm font-medium text-black hover:text-gray-600 transition-colors font-sans cursor-target"
+                    target="_blank" rel="noopener noreferrer"
+                  >
+                    VIEW PROJECT
                   </a>
                 </div>
               </div>
