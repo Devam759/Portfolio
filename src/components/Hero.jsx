@@ -24,7 +24,7 @@ export default function Hero() {
         </p>
         
         {/* Main Title */}
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight mb-12 font-display">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight mb-12 font-display">
           <TextType
             text={["I'm Devam Gupta"]}
             as="span"
@@ -52,7 +52,7 @@ export default function Hero() {
           
           {/* Profile Image */}
           <img 
-            src="/images/profile.png" 
+            src="/images/profile.webp" 
             alt="Devam Gupta" 
             className="relative z-10 w-full h-auto object-cover rounded-md" 
             // style={{ clipPath: 'polygon(0 0, 100% 0, 100% 85%, 0% 100%)' }}

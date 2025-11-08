@@ -10,7 +10,7 @@ const projects = [
     description:
       'A smart hostel attendance system that digitizes student check-ins, ensuring accuracy, and ease for both students and wardens.',
     stack: ['React', 'Node.js', 'MySQL', 'Tailwind'],
-    image: '/images/projects/VISTA.png',
+    image: '/images/projects/VISTA.webp',
     live: 'https://vista-ten-snowy.vercel.app/',
     github: 'https://github.com/Devam759/VISTA.git',
   },
@@ -20,7 +20,7 @@ const projects = [
     description:
       'A streamlined platform that connects tailors and customers, enabling effortless clothing customization and order management.',
     stack: ['React', 'Express.js', 'MongoDB', 'Tailwind'],
-    image: '/images/projects/StitchUp.png',
+    image: '/images/projects/StitchUp.webp',
     live: 'https://stitchup.vercel.app/',
     github: 'https://github.com/ParthDhoot27/stichUP.git',
   },
@@ -30,7 +30,7 @@ const projects = [
     description:
       "a vibrant event website crafted with a dynamic and responsive frontend to showcase JKLU's college’s annual cultural fest.",
     stack: ['React', 'Next.js', 'Tailwind'],
-    image: '/images/projects/SABRANG.png',
+    image: '/images/projects/SABRANG.webp',
     live: 'https://sabrang25-first-draft.vercel.app/',
     github: 'https://github.com/suryaansh001/Sabrang25First_Draft.git',
   },
@@ -40,7 +40,7 @@ const projects = [
     description:
       'An engaging and visually appealing frontend developed to represent our college’s freshers’ event with a modern, user-friendly design.',
     stack: ['HTML', 'CSS', 'JS'],
-    image: '/images/projects/AARAMBH.png',
+    image: '/images/projects/AARAMBH.webp',
     live: 'https://aarambh-demo.vercel.app/',
     github: 'https://github.com/aman67032/aarambh_demo.git',
   },
@@ -50,7 +50,7 @@ const projects = [
     description:
       'A self-designed UI project aimed at enhancing the user experience and interface of a hackathon conducting brand.',
     stack: ['React', 'Framer Motion', 'Tailwind'],
-    image: '/images/projects/Hackers_Unity.png',
+    image: '/images/projects/Hackers_Unity.webp',
     live: 'https://hackers-unity.vercel.app/',
     github: 'https://github.com/Devam759/Hackers-Unity.git',
   },
@@ -60,7 +60,7 @@ const projects = [
     description:
       'a personal frontend project focused on redesigning and modernizing the UI of a cultural fashion brand.',
     stack: ['React', 'Next.js', 'Tailwind'],
-    image: '/images/projects/Anokhi.png',
+    image: '/images/projects/Anokhi.webp',
     live: 'https://anokhi.vercel.app/',
     github: 'https://github.com/Devam759/Anokhi.git',
   },
@@ -97,10 +97,13 @@ export default function Projects() {
               <div className="h-1 w-full bg-black/80" />
 
               {project.image ? (
-                <img
+                <motion.img
                   src={project.image}
                   alt={`${project.title} project screenshot`}
                   className="h-48 w-full object-cover transition-all duration-300 saturate-0 group-hover:saturate-100"
+                  whileInView={{ filter: 'saturate(1)' }}
+                  viewport={{ amount: 0.4, once: false }}
+                  transition={{ duration: 0.6, ease: 'easeOut' }}
                 />
               ) : (
                 <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200" />

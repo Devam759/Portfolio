@@ -37,7 +37,7 @@ export default function Header() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -100 }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
-          className="fixed top-4 left-0 right-0 z-50"
+          className="fixed top-4 left-0 right-0 z-50 hidden md:block"
         >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex items-center justify-center h-12 lg:h-14">
