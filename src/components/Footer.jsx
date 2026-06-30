@@ -1,5 +1,7 @@
 import React from 'react'
-import { SiGithub, SiLinkedin, SiInstagram } from 'react-icons/si'
+import SiGithub from '@icons-pack/react-simple-icons/icons/SiGithub.mjs'
+import SiInstagram from '@icons-pack/react-simple-icons/icons/SiInstagram.mjs'
+import { FaLinkedin } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 
 export default function Footer() {
@@ -26,16 +28,16 @@ export default function Footer() {
             </a>
           </div>
           <div className="flex items-center gap-4 text-white">
-            <a href="https://github.com/Devam759" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="cursor-target hover:text-gray-300">
+            <a id="mobile-footer-github" href="https://github.com/Devam759" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="cursor-target hover:text-gray-300">
               <SiGithub size={22} />
             </a>
-            <a href="https://www.linkedin.com/in/devam-gupta-929239271/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="cursor-target hover:text-gray-300">
-              <SiLinkedin size={22} />
+            <a id="mobile-footer-linkedin" href="https://www.linkedin.com/in/devam-gupta-929239271/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="cursor-target hover:text-gray-300">
+              <FaLinkedin size={22} />
             </a>
-            <a href="mailto:devamg759@gmail.com" aria-label="Email" className="cursor-target hover:text-gray-300">
+            <a id="mobile-footer-email" href="mailto:devamg759@gmail.com" aria-label="Email" className="cursor-target hover:text-gray-300">
               <MdEmail size={22} />
             </a>
-            <a href="https://www.instagram.com/who.is.devam/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="cursor-target hover:text-gray-300">
+            <a id="mobile-footer-instagram" href="https://www.instagram.com/who.is.devam/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="cursor-target hover:text-gray-300">
               <SiInstagram size={22} />
             </a>
           </div>
@@ -61,16 +63,16 @@ export default function Footer() {
             </a>
           </div>
           <div className="flex items-center justify-end gap-4 text-white">
-            <a href="https://github.com/Devam759" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="cursor-target hover:text-gray-300">
+            <a id="footer-github" href="https://github.com/Devam759" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="cursor-target hover:text-gray-300">
               <SiGithub size={22} />
             </a>
-            <a href="https://www.linkedin.com/in/devam-gupta-929239271/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="cursor-target hover:text-gray-300">
-              <SiLinkedin size={22} />
+            <a id="footer-linkedin" href="https://www.linkedin.com/in/devam-gupta-929239271/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="cursor-target hover:text-gray-300">
+              <FaLinkedin size={22} />
             </a>
-            <a href="mailto:devamg759@gmail.com" aria-label="Email" className="cursor-target hover:text-gray-300">
+            <a id="footer-email" href="mailto:devamg759@gmail.com" aria-label="Email" className="cursor-target hover:text-gray-300">
               <MdEmail size={22} />
             </a>
-            <a href="https://www.instagram.com/who.is.devam/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="cursor-target hover:text-gray-300">
+            <a id="footer-instagram" href="https://www.instagram.com/who.is.devam/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="cursor-target hover:text-gray-300">
               <SiInstagram size={22} />
             </a>
           </div>

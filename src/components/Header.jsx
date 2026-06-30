@@ -46,19 +46,17 @@ export default function Header() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="hidden md:flex items-center bg-white/90 backdrop-blur-md border border-black rounded-full px-8 py-2.5 shadow-sm"
+            className="hidden md:flex items-center bg-white/90 backdrop-blur-md border border-black rounded-full px-8 py-2.5 shadow-sm gap-2"
           >
-            {navLinks.map((link, index) => (
-              <motion.a
+            {navLinks.map((link) => (
+              <a
                 key={link.name}
+                id={`nav-link-${link.name.toLowerCase().replace(/\s+/g, '-')}`}
                 href={link.href}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-sm font-bold uppercase text-gray-700 hover:text-black transition-colors font-sans px-5 py-1.5 rounded-full hover:bg-gray-100 cursor-target"
+                className="text-sm font-bold uppercase text-gray-700 hover:text-black transition-colors font-sans px-5 py-1.5 rounded-full hover:bg-gray-100 cursor-target whitespace-nowrap"
               >
                 {link.name}
-              </motion.a>
+              </a>
             ))}
           </motion.nav>
 
@@ -91,6 +89,7 @@ export default function Header() {
                 {navLinks.map((link) => (
                   <a
                     key={link.name}
+                    id={`mobile-nav-link-${link.name.toLowerCase().replace(/\s+/g, '-')}`}
                     href={link.href}
                     className="block py-2 text-gray-700 hover:text-black transition-colors font-sans cursor-target"
                     onClick={() => setMobileMenuOpen(false)}

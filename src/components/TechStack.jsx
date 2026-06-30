@@ -3,26 +3,24 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import LogoLoop from './LogoLoop'
-import {
-  SiHtml5,
-  SiCss3,
-  SiJavascript,
-  SiPython,
-  SiC,
-  SiVite,
-  SiReact,
-  SiMongodb,
-  SiMysql,
-  SiNodedotjs,
-  SiExpress,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiTypescript,
-} from 'react-icons/si'
+import SiHtml5 from '@icons-pack/react-simple-icons/icons/SiHtml5.mjs'
+import SiCss from '@icons-pack/react-simple-icons/icons/SiCss.mjs'
+import SiJavascript from '@icons-pack/react-simple-icons/icons/SiJavascript.mjs'
+import SiPython from '@icons-pack/react-simple-icons/icons/SiPython.mjs'
+import SiC from '@icons-pack/react-simple-icons/icons/SiC.mjs'
+import SiVite from '@icons-pack/react-simple-icons/icons/SiVite.mjs'
+import SiReact from '@icons-pack/react-simple-icons/icons/SiReact.mjs'
+import SiMongodb from '@icons-pack/react-simple-icons/icons/SiMongodb.mjs'
+import SiMysql from '@icons-pack/react-simple-icons/icons/SiMysql.mjs'
+import SiNodedotjs from '@icons-pack/react-simple-icons/icons/SiNodedotjs.mjs'
+import SiExpress from '@icons-pack/react-simple-icons/icons/SiExpress.mjs'
+import SiNextdotjs from '@icons-pack/react-simple-icons/icons/SiNextdotjs.mjs'
+import SiTailwindcss from '@icons-pack/react-simple-icons/icons/SiTailwindcss.mjs'
+import SiTypescript from '@icons-pack/react-simple-icons/icons/SiTypescript.mjs'
 
 const techLogos = [
   { node: <SiHtml5 />, title: 'HTML5', href: 'https://developer.mozilla.org/docs/Web/HTML' },
-  { node: <SiCss3 />, title: 'CSS3', href: 'https://developer.mozilla.org/docs/Web/CSS' },
+  { node: <SiCss />, title: 'CSS', href: 'https://developer.mozilla.org/docs/Web/CSS' },
   { node: <SiJavascript />, title: 'JavaScript', href: 'https://developer.mozilla.org/docs/Web/JavaScript' },
   { node: <SiPython />, title: 'Python', href: 'https://www.python.org' },
   { node: <SiC />, title: 'C', href: 'https://en.wikipedia.org/wiki/C_(programming_language)' },
