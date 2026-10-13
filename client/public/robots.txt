@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Host & Sitemap
+Host: https://portfoliodevam.netlify.app
+Sitemap: https://portfoliodevam.netlify.app/sitemap.xml

@@ -1,0 +1,42 @@
+# Devam Gupta — Developer & Software Engineering Portfolio
+
+> Full-Stack Developer and Computer Science undergraduate with hands-on experience across React.js, Next.js, Node.js, and Flutter/Firebase. Proven track record leading technical and sponsorship teams for university-scale events, building production-grade web and mobile applications, and applying Generative AI workflows.
+
+- Name: Devam Gupta
+- Location: Jaipur / Bikaner, Rajasthan, India
+- Portfolio: https://portfoliodevam.netlify.app
+- GitHub: https://github.com/Devam759
+- LinkedIn: https://linkedin.com/in/devam-gupta
+- Email: devamg759@gmail.com
+- Phone: +91 7340015201
+- University: JK Lakshmipat University, Jaipur (B.Tech Computer Science and Engineering, 2024 - 2028)
+
+## Technical Expertise
+- Languages: JavaScript (ES6+), Python, Dart, SQL, HTML5, CSS3
+- Frontend: React.js, Next.js, Tailwind CSS, Framer Motion
+- Backend & APIs: Node.js, Express.js, RESTful Architecture, Webhooks
+- Databases & Cloud: MongoDB, Firebase Firestore / Realtime DB, TFLite
+- Developer Tools: Git, GitHub, VS Code, Linux, Docker, Netlify, Vercel
+
+## Featured Projects
+- VISTA (Virtual Intelligent Student Tracking & Attendance): Cross-platform smart hostel management app used at JKLU with role-based access for Students, Wardens, and Head Wardens. Implemented facial recognition attendance using MobileFaceNet via TFLite (Flutter, Firebase, TFLite).
+- StitchUp: Doorstep tailor-on-demand platform connecting users with local tailors, featuring real-time booking, automated measurements, and order tracking (MERN Stack).
+- Sabrang 2025: Official festival web portal for JKLU's annual national cultural fest (sabrang.jklu.edu.in) featuring dynamic event schedules and high-performance frontend architecture (Next.js, React, Tailwind CSS).
+- AARAMBH 2025: Official orientation web platform for incoming university students at JK Lakshmipat University (React, JavaScript).
+
+## Work Experience
+- Web Development Intern at Hayagreeva Consulting Private Limited (May 2026 - Jul 2026): Engineered and maintained production web platforms for Maruti Suzuki Arena and Nexa, delivering responsive frontend interfaces and site maintenance across automotive web workflows.
+
+## Leadership & Volunteering
+- Core Team - Sponsorships, HackJKLU v5.0 (2025): Led corporate sponsorship outreach for the university's flagship national hackathon, managing a database of 500+ sponsor prospects across 24 sectors.
+- Tech Team Leader, AARAMBH 2025 (May 2025 - Jul 2025): Spearheaded the technical team engineering the university orientation web application.
+- Technical Operations Volunteer, NASSCOM Technology Confluence (Nov 2025): Supported on-ground technical infrastructure and networking operations.
+- Education Volunteer & Mentor, MuskaanShaala Initiative (Mar 2025 - May 2025): Taught foundational digital literacy and mathematics to underprivileged children.
+
+## Certifications & Achievements
+- 4th Place Winner, HACKSTORM 2024 National Hackathon among 70+ competing teams (production-ready MERN application).
+- Machine Learning Operations (MLOps) for Generative AI — Google (Jun 2025)
+- Generative AI for Everyone — DeepLearning.AI (Jan 2025)
+- Google Prompting Essentials — Google (Jan 2025)
+- Introduction to Git and GitHub — Google (Jan 2025)
+- Programming for Everybody — University of Michigan (Dec 2024)
