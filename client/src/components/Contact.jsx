@@ -30,7 +30,8 @@ export default function Contact() {
     setFeedbackMessage('')
 
     try {
-      const response = await fetch('/api/contact', {
+      const apiBase = import.meta.env.VITE_API_BASE_URL || ''
+      const response = await fetch(`${apiBase}/api/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

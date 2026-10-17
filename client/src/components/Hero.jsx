@@ -18,7 +18,8 @@ export default function Hero() {
   }, [])
 
   const handleDownload = (format) => {
-    window.open(`/api/resume/${format}`, '_blank')
+    const apiBase = import.meta.env.VITE_API_BASE_URL || ''
+    window.open(`${apiBase}/api/resume/${format}`, '_blank')
     setDownloadOpen(false)
   }
 
