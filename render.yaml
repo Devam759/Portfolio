@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: portfolio-api-devam
+    runtime: node
+    plan: free
+    region: oregon
+    rootDir: server
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CLIENT_URL
+        value: https://portfoliodevam.netlify.app
+      - key: MONGODB_URI
+        sync: false
+      - key: EMAIL_SERVICE
+        value: gmail
+      - key: EMAIL_USER
+        sync: false
+      - key: EMAIL_PASS
+        sync: false
+      - key: NOTIFICATION_RECIPIENT
+        sync: false
