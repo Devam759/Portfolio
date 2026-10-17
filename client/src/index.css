@@ -12,12 +12,20 @@
   --font-display: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   overflow-x: hidden;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+section[id] {
+  scroll-margin-top: 5.5rem;
 }
 
 *, ::before, ::after {

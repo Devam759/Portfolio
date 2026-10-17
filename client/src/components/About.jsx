@@ -1,12 +1,13 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { ASSETS } from '../constants/assets'
 
 export default function About() {
   return (
     <section
       id="about"
       className="relative py-24 md:py-32 bg-cover bg-center bg-no-repeat transition-colors"
-      style={{ backgroundImage: "url('/images/bg-about2.webp')" }}
+      style={{ backgroundImage: `url('${ASSETS.brand.bgAbout}')` }}
     >
       {/* Subtle overlay for consistent text contrast in light & dark modes */}
       <div className="absolute inset-0 bg-white/85 dark:bg-[#0a0a0c]/90 backdrop-blur-[2px] transition-colors" />
@@ -42,10 +43,14 @@ export default function About() {
             From developing enterprise automotive web modules during my internship at Hayagreeva Consulting to architecting campus systems like VISTA and fest platforms like Sabrang and AARAMBH, I prioritize clean architecture, performant interfaces, and reliable code.
           </p>
 
-          <div className="pt-6 border-t border-black/10 dark:border-white/10 flex flex-wrap justify-center gap-8 text-sm font-sans">
+          <div className="pt-6 border-t border-black/10 dark:border-white/10 flex flex-wrap justify-center gap-6 sm:gap-8 text-sm font-sans">
             <div>
               <span className="text-gray-500 dark:text-gray-400 font-medium mr-2">Location:</span>
               <span className="font-semibold text-gray-900 dark:text-white">Jaipur / Bikaner, Rajasthan, India</span>
+            </div>
+            <div>
+              <span className="text-gray-500 dark:text-gray-400 font-medium mr-2">Status:</span>
+              <span className="font-semibold text-gray-900 dark:text-white">Undergraduate Student / Fresher</span>
             </div>
             <div>
               <span className="text-gray-500 dark:text-gray-400 font-medium mr-2">Degree:</span>

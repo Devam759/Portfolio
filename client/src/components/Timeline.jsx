@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { ASSETS } from '../constants/assets'
 
 const timelineItems = [
   {
@@ -10,8 +11,8 @@ const timelineItems = [
     description:
       'Engineered and maintained production web platforms for Maruti Suzuki Arena and Nexa. Delivered responsive frontend interfaces, performed site maintenance, and contributed proactively across web development workflows.',
     brandLogos: [
-      { name: 'Hayagreeva Consulting', image: '/logos/hayagreeva.png' },
-      { name: 'Maruti Suzuki', image: '/logos/maruti.png' },
+      { name: 'Hayagreeva Consulting', image: ASSETS.logos.hayagreeva },
+      { name: 'Maruti Suzuki', image: ASSETS.logos.maruti },
     ],
   },
   {
@@ -24,8 +25,8 @@ const timelineItems = [
     brandLogos: [
       {
         name: 'JK Lakshmipat University',
-        image: '/logos/jklu.jpg',
-        darkImage: '/logos/jklu-darkbg.png',
+        image: ASSETS.logos.jklu,
+        darkImage: ASSETS.logos.jkluDarkbg,
       },
     ],
   },

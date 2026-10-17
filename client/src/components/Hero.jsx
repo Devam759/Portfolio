@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FaFilePdf, FaFileWord, FaChevronDown, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import TextType from './TextType'
+import { ASSETS } from '../constants/assets'
 
 export default function Hero() {
   const [downloadOpen, setDownloadOpen] = useState(false)
@@ -46,7 +47,7 @@ export default function Hero() {
             {/* Main Picture Frame */}
             <div className="relative z-10 w-full overflow-hidden rounded-[64px_20px_64px_20px] bg-gray-100 dark:bg-[#141418] border border-black/10 dark:border-white/10 shadow-2xl transition-transform duration-300 group-hover:-translate-y-1">
               <img 
-                src="/images/profile.webp" 
+                src={ASSETS.brand.profile} 
                 alt="Devam Gupta - Full Stack Developer and Software Engineer Portrait" 
                 className="w-full h-auto object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105" 
               />

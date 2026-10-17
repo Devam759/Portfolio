@@ -45,24 +45,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Structured Data (JSON-LD) -->
+    <!-- Structured Data (JSON-LD) for Maximum Google SEO Rankings -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "ProfilePage",
+          "@id": "https://portfoliodevam.netlify.app/#webpage",
+          "url": "https://portfoliodevam.netlify.app/",
+          "name": "Devam Gupta | Full-Stack Developer & Software Engineer Portfolio",
+          "description": "Official portfolio of Devam Gupta, Full-Stack Developer specializing in MERN Stack, React.js, Next.js, Node.js, and modern cloud architectures.",
+          "isPartOf": {
+            "@id": "https://portfoliodevam.netlify.app/#website"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://portfoliodevam.netlify.app/og-image.png"
+          },
+          "datePublished": "2024-08-01T00:00:00+05:30",
+          "dateModified": "2026-10-18T00:00:00+05:30",
+          "mainEntity": {
+            "@id": "https://portfoliodevam.netlify.app/#person"
+          }
+        },
+        {
           "@type": "Person",
           "@id": "https://portfoliodevam.netlify.app/#person",
           "name": "Devam Gupta",
+          "alternateName": ["Devam", "DevamGupta", "Devam759"],
           "jobTitle": "Full-Stack Developer & Software Engineer",
+          "description": "Full-Stack Software Engineer and Computer Science undergraduate at JK Lakshmipat University. Experienced in React.js, Next.js, Node.js, Express.js, MongoDB, Flutter, and scalable web architectures.",
           "url": "https://portfoliodevam.netlify.app/",
-          "image": "https://portfoliodevam.netlify.app/images/profile.webp",
+          "image": "https://res.cloudinary.com/daexb6g02/image/upload/f_auto,q_auto/v1792264414/portfolio/brand/profile.webp",
           "email": "mailto:devamg759@gmail.com",
           "telephone": "+91-7340015201",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Jaipur",
             "addressRegion": "Rajasthan",
+            "postalCode": "302026",
             "addressCountry": "IN"
           },
           "alumniOf": {
@@ -70,6 +92,23 @@
             "name": "JK Lakshmipat University",
             "url": "https://www.jklu.edu.in/"
           },
+          "knowsAbout": [
+            "Full-Stack Web Development",
+            "MERN Stack",
+            "React.js",
+            "Next.js",
+            "Node.js",
+            "Express.js",
+            "MongoDB & Mongoose",
+            "JavaScript (ES6+)",
+            "TypeScript",
+            "Tailwind CSS",
+            "Flutter & Dart",
+            "Python",
+            "RESTful APIs",
+            "Docker & Containerization",
+            "Cloud Deployment (Render & Netlify)"
+          ],
           "sameAs": [
             "https://github.com/Devam759",
             "https://linkedin.com/in/devam-gupta",
@@ -81,45 +120,63 @@
           "@id": "https://portfoliodevam.netlify.app/#website",
           "url": "https://portfoliodevam.netlify.app/",
           "name": "Devam Gupta Portfolio",
-          "description": "Personal engineering portfolio of Full-Stack Developer Devam Gupta",
+          "alternateName": "Devam Gupta Full-Stack Developer Website",
+          "description": "Official software engineering portfolio of Devam Gupta featuring full-stack projects, experience timeline, technical skills, and contact form.",
+          "inLanguage": "en-US",
           "publisher": {
             "@id": "https://portfoliodevam.netlify.app/#person"
           }
         },
         {
-          "@type": "ProfessionalService",
-          "@id": "https://portfoliodevam.netlify.app/#service",
-          "name": "Devam Gupta - Full-Stack Web Development & Software Engineering",
-          "image": "https://portfoliodevam.netlify.app/og-image.png",
-          "url": "https://portfoliodevam.netlify.app/",
-          "telephone": "+91-7340015201",
-          "priceRange": "$$",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Jaipur",
-            "addressRegion": "Rajasthan",
-            "addressCountry": "IN"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 26.9124,
-            "longitude": 75.7873
-          },
-          "areaServed": [
-            "Jaipur",
-            "Bikaner",
-            "Rajasthan",
-            "India",
-            "Remote Worldwide"
-          ],
-          "knowsAbout": [
-            "Full-Stack Web Development",
-            "React.js",
-            "Next.js",
-            "Node.js",
-            "MERN Stack",
-            "REST APIs",
-            "UI/UX Engineering"
+          "@type": "ItemList",
+          "@id": "https://portfoliodevam.netlify.app/#projects-list",
+          "name": "Featured Software Projects by Devam Gupta",
+          "itemListElement": [
+            {
+              "@type": "SoftwareApplication",
+              "position": 1,
+              "name": "VISTA",
+              "applicationCategory": "Web & Mobile Application",
+              "operatingSystem": "Web, Android, iOS",
+              "description": "Smart hostel attendance and tracking platform at JKLU featuring facial recognition attendance via MobileFaceNet and warden leave workflows.",
+              "url": "https://vista-jklu.web.app"
+            },
+            {
+              "@type": "SoftwareApplication",
+              "position": 2,
+              "name": "Sabrang 2026",
+              "applicationCategory": "Web Application",
+              "operatingSystem": "All Web Browsers",
+              "description": "Official high-performance festival web portal for Sabrang 2026 at JKLU with event catalog, dynamic ticketing, and registrations.",
+              "url": "https://sabrang-26.vercel.app"
+            },
+            {
+              "@type": "SoftwareApplication",
+              "position": 3,
+              "name": "JKLU Sankalp 2027",
+              "applicationCategory": "Web Application",
+              "operatingSystem": "All Web Browsers",
+              "description": "Social and cultural flagship portal for JKLU Sankalp featuring program showcases and community outreach.",
+              "url": "https://sankalp-27.vercel.app"
+            },
+            {
+              "@type": "SoftwareApplication",
+              "position": 4,
+              "name": "StitchUp",
+              "applicationCategory": "E-Commerce & Service Platform",
+              "operatingSystem": "All Web Browsers",
+              "description": "Doorstep tailor-on-demand platform connecting clients with local tailors featuring automated measurement tracking.",
+              "url": "https://stitchup-1af69.web.app"
+            },
+            {
+              "@type": "SoftwareApplication",
+              "position": 5,
+              "name": "AARAMBH 2026",
+              "applicationCategory": "Web Application",
+              "operatingSystem": "All Web Browsers",
+              "description": "University orientation program portal coordinating digital schedules and incoming student onboarding.",
+              "url": "https://aarambh-26.web.app"
+            }
           ]
         },
         {
@@ -141,30 +198,36 @@
             {
               "@type": "ListItem",
               "position": 3,
+              "name": "Skills",
+              "item": "https://portfoliodevam.netlify.app/#skills"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
               "name": "Projects",
               "item": "https://portfoliodevam.netlify.app/#projects"
             },
             {
               "@type": "ListItem",
-              "position": 4,
+              "position": 5,
               "name": "Timeline",
               "item": "https://portfoliodevam.netlify.app/#timeline"
             },
             {
               "@type": "ListItem",
-              "position": 5,
+              "position": 6,
               "name": "Volunteering",
               "item": "https://portfoliodevam.netlify.app/#cocurricular"
             },
             {
               "@type": "ListItem",
-              "position": 6,
+              "position": 7,
               "name": "Certifications",
               "item": "https://portfoliodevam.netlify.app/#certifications"
             },
             {
               "@type": "ListItem",
-              "position": 7,
+              "position": 8,
               "name": "Contact",
               "item": "https://portfoliodevam.netlify.app/#contact"
             }

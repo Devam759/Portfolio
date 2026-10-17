@@ -1,4 +1,4 @@
-# Devam Gupta — Full-Stack MERN Personal Portfolio
+# Devam Gupta - Full-Stack MERN Personal Portfolio
 
 A professional, responsive, and performant personal portfolio website built with the **MERN Stack** (React.js, Node.js, Express.js, MongoDB). Designed and structured in accordance with the **MERN Stack Course Portfolio Assignment** guidelines.
 
@@ -18,30 +18,36 @@ The project is structured into clear `/client` (Frontend) and `/server` (Backend
 
 ```
 Portfolio/
+├── .github/
+│   └── workflows/
+│       └── keep-alive.yml      # Cron workflow pinging Render API every 14 mins to prevent cold starts
+│
 ├── client/                     # Frontend Application (React.js + Vite)
 │   ├── public/                 # Static assets, sitemap.xml, robots.txt, llms.txt, favicon
 │   ├── src/
 │   │   ├── components/         # Modular UI Components
-│   │   │   ├── Hero.jsx        # Landing section with Typewriter & CV CTA
-│   │   │   ├── About.jsx       # Bio, location & current student status
-│   │   │   ├── Skills.jsx      # Categorized skill badges
-│   │   │   ├── Projects.jsx    # Filterable project showcase
-│   │   │   ├── Timeline.jsx    # Vertical education & experience timeline with brand logos
-│   │   │   ├── CoCurricular.jsx# Dedicated Co-Curricular & Volunteering showcase
-│   │   │   ├── Certifications.jsx # Verified certificates & hackathons
+│   │   │   ├── Hero.jsx        # Landing section with Typewriter, photo frame & CV CTA
+│   │   │   ├── About.jsx       # Bio, location, undergraduate status & degree
+│   │   │   ├── Skills.jsx      # Categorized skill badges with hover proficiency tooltips
+│   │   │   ├── Projects.jsx    # 10 production projects with live demos & repos
+│   │   │   ├── Timeline.jsx    # Vertical education & experience timeline with logos
+│   │   │   ├── CoCurricular.jsx# Dedicated Co-Curricular & volunteering showcase
+│   │   │   ├── Certifications.jsx # Clean certifications & hackathon honors index
 │   │   │   ├── Contact.jsx     # Backend-connected MongoDB contact form
 │   │   │   ├── NotFound.jsx    # Custom 404 page
-│   │   │   ├── Header.jsx      # Responsive floating pill nav + Dark mode toggle
+│   │   │   ├── Header.jsx      # Floating pill navbar with smooth animated scroll & dark mode toggle
 │   │   │   ├── Footer.jsx      # Social links & contact info
 │   │   │   ├── TargetCursor.jsx# Interactive custom cursor
 │   │   │   ├── TextType.jsx    # Typewriter component
 │   │   │   ├── LogoLoop.jsx    # Smooth infinite CSS marquee
 │   │   │   └── FlowingWaves.jsx# Layered wave background
+│   │   ├── constants/
+│   │   │   └── assets.js       # Cloudinary CDN optimized asset URLs (f_auto, q_auto)
 │   │   ├── context/
 │   │   │   └── ThemeContext.jsx# Dark Mode / Light Mode Provider
-│   │   ├── App.jsx             # Root layout assembler
+│   │   ├── App.jsx             # Root layout assembler with smooth section routing
 │   │   ├── main.jsx            # Entry point with BrowserRouter & ThemeProvider
-│   │   └── index.css           # Tailwind CSS styles & themes
+│   │   └── index.css           # Tailwind CSS styles & smooth scroll behavior
 │   ├── index.html              # HTML shell with SEO meta & fonts
 │   ├── vite.config.js          # Vite config with API proxy
 │   └── package.json            # Client dependencies
@@ -51,7 +57,7 @@ Portfolio/
 │   │   └── Contact.js          # Mongoose schema for contact messages
 │   │
 │   ├── routes/
-│   │   ├── contact.js          # POST /api/contact & GET /api/contact
+│   │   ├── contact.js          # POST /api/contact (with dual Nodemailer alerts) & GET /api/contact
 │   │   └── resume.js           # GET /api/resume/pdf & GET /api/resume/docx
 │   │
 │   ├── files/                  # Server-served resume documents
@@ -63,6 +69,7 @@ Portfolio/
 │   └── package.json            # Server dependencies
 │
 ├── .gitignore                  # Excludes node_modules and .env files
+├── netlify.toml                # Netlify deployment configuration & reverse proxy rewrite
 ├── README.md                   # Complete documentation
 └── package.json                # Root orchestration scripts
 ```
@@ -74,57 +81,65 @@ Portfolio/
 ### 1. Hero / Landing Section
 - Animated intro with name, role, and designation.
 - Dynamic typewriter effect.
-- **Call-to-Action (CTA) button to Download CV**, providing options for both **PDF** and **Word (.docx)** served from the Express backend.
-- Professional layered wave animation.
+- **Call-to-Action (CTA) button to Download CV**, providing options for both **PDF** and **Word (.docx)** streamed directly from the Express backend.
+- Architectural asymmetric photo frame backed by Cloudinary CDN.
+- Smooth floating wave aesthetic.
 
 ### 2. About Me Section
-- Professional biography and high-resolution profile image.
-- Explicit **Location** (*Jaipur, Rajasthan, India*) and **Current Status** (*B.Tech CSE Student, Class of 2026*).
+- Professional biography highlighting engineering leadership, web development, and applied Generative AI.
+- Explicit **Location** (*Jaipur / Bikaner, Rajasthan, India*), **Status** (*Undergraduate Student / Fresher*), and **Degree** (*B.Tech CSE, 2024 - 2028 at JK Lakshmipat University*).
 - Scroll-triggered reveal animations.
 
 ### 3. Skills & Proficiency
 - Grouped into three distinct categories:
-  - **Frontend Development** (React.js, JavaScript, Tailwind, Next.js, HTML5/CSS3, TypeScript)
-  - **Backend & Database** (Node.js, Express.js REST APIs, MongoDB & Mongoose, MySQL, JWT)
-  - **Tools & Technologies** (Git/GitHub, Vite, Postman, Vercel/Render, Linux)
-- Animated progress bars displaying percentage metrics.
-- Hover tooltips indicating proficiency level (*Expert*, *Advanced*, *Proficient*).
-- Infinite logo marquee ticker.
+  - **Frontend Development** (React.js, Next.js, JavaScript, Flutter & Dart, Tailwind CSS, HTML5 & CSS3)
+  - **Backend & Database** (Node.js, Express.js, MongoDB, Firebase, Python, SQL & MySQL)
+  - **Tools & Technologies** (Git & GitHub, Docker, Postman, VS Code, Linux, Netlify & Vercel)
+- Interactive hover tooltips indicating proficiency tiers (*Expert*, *Advanced*, *Proficient*).
+- Infinite logo marquee ticker with smooth CSS animation.
 
 ### 4. Projects Showcase
-- 6 featured projects displayed as interactive responsive cards:
-  - **VISTA** (Smart Hostel Attendance System)
-  - **StitchUp** (Tailor & Customer Customization Platform)
-  - **SABRANG'25** (University Annual Fest Portal)
-  - **AARAMBH'25** (Freshers Portal)
-  - **Hacker's Unity** (Hackathon Community Platform)
-  - **Anokhi** (Cultural Fashion UI)
-- Tech stack tags, project description, GitHub repository link, and live demo link for each card.
-- **Technology category filter tabs** (*All*, *Full Stack*, *Frontend*, *UI/UX*).
+- 10 featured production projects displayed as clean, borderless interactive cards:
+  - **VISTA** (Hostel Attendance & Tracking Platform with MobileFaceNet)
+  - **Sabrang 2026** (University Annual Fest Portal)
+  - **JKLU Sankalp 2027** (University Social & Cultural Web Portal)
+  - **StitchUp** (Doorstep Custom Tailor-on-Demand Platform)
+  - **Pindi Traders** (Commercial Wholesale Catalog)
+  - **AARAMBH 2026** (Freshers Orientation Portal)
+  - **JKLU Got Latent** (Interactive Competition Voting & Scoring System)
+  - **Anokhi** (Modern Cultural Fashion E-Commerce UI)
+  - **Browser Vigilant** (Proctoring & Focus Integrity Monitor)
+  - **All About Ramayana** (Digital Storytelling Platform)
+- Tech stack tags, detailed descriptions, GitHub repository links, and live demo links for each card.
 
 ### 5. CV / Resume Download (Backend Routes)
 - Resumes are served directly via Express.js backend streaming routes:
-  - `GET /api/resume/pdf` — Serves `Devam_Gupta_Resume.pdf` with `Content-Disposition: attachment`.
-  - `GET /api/resume/docx` — Serves `Devam_Gupta_Resume.docx` with `Content-Disposition: attachment`.
+  - `GET /api/resume/pdf` - Serves `Devam_Gupta_Resume.pdf` with `Content-Disposition: attachment`.
+  - `GET /api/resume/docx` - Serves `Devam_Gupta_Resume.docx` with `Content-Disposition: attachment`.
 
 ### 6. Education & Experience Timeline
-- Vertical animated timeline layout with milestone icons.
-- Highlights degree (*B.Tech in CSE at JK Lakshmipat University*), secondary education, project leadership, and technical team roles.
+- Vertical animated timeline layout with milestone icons and organization logos.
+- Highlights degree (*B.Tech in CSE at JK Lakshmipat University*), schooling, industry internship at Hayagreeva Consulting, project leadership, and technical team roles.
 
 ### 7. Certifications & Achievements
-- Verified course certifications (Coursera/Meta, NPTEL/IIT, freeCodeCamp, LinkedIn Learning).
-- Direct credential verification links.
-- Hackathon finalist recognition and university fest organization honors.
+- Certifications from Google, DeepLearning.AI, and the University of Michigan.
+- National Hackathon recognition (*4th Place Winner - HACKSTORM 2024*) and university fest leadership honors.
 
 ### 8. Backend-Connected Contact Form
 - Form fields: `Name`, `Email`, `Message` with client-side and server-side validation.
 - Submissions are sent via `POST /api/contact` and saved in **MongoDB** using **Mongoose**.
-- Real-time user feedback with loading states, success confirmation, and error banners.
-- Configured with optional **Nodemailer** integration for email notifications.
+- Dual Nodemailer notifications: sends an instant alert to the administrator (`devamg759@gmail.com`) and an automatic confirmation receipt to the visitor.
+- Real-time feedback with loading states, success confirmation, and error banners.
 
-### 9. Theme & Dark Mode
+### 9. Navigation & Smooth Scrolling
+- Floating glassmorphism pill navigation.
+- Smooth scroll animation on button clicks with offset calculation to keep section headers perfectly framed.
+- Dynamic active section tracking based on viewport scroll position.
 - System-aware **Dark Mode / Light Mode toggle** persisted in `localStorage`.
-- High-contrast styles tailored for both themes across all components.
+
+### 10. Performance & Cloudinary CDN
+- All media assets (brand portraits, logos, project screenshots) delivered via **Cloudinary CDN** with automated format and quality optimization (`f_auto,q_auto`).
+- Automated keep-alive workflow pinging the Render service every 14 minutes to eliminate cold starts.
 
 ---
 
@@ -133,6 +148,7 @@ Portfolio/
 - **Frontend**: React.js 19, React Router v7, Tailwind CSS v4, Framer Motion, React Icons
 - **Backend**: Node.js, Express.js, CORS, Dotenv, Nodemailer
 - **Database**: MongoDB, Mongoose ODM
+- **Cloud & CDN**: Cloudinary CDN, Render, Netlify, GitHub Actions
 - **Build & Dev Tooling**: Vite, Concurrently, Nodemon
 
 ---
@@ -229,7 +245,7 @@ npm run dev:server
 ## 👤 Author
 
 **Devam Gupta**  
-*Computer Science & Engineering Student — JK Lakshmipat University, Jaipur*  
+*Computer Science & Engineering Student - JK Lakshmipat University, Jaipur*  
 - **GitHub**: [@Devam759](https://github.com/Devam759)  
 - **LinkedIn**: [Devam Gupta](https://www.linkedin.com/in/devam-gupta-929239271/)  
 - **Email**: devamg759@gmail.com  

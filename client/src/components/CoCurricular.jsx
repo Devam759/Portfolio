@@ -1,7 +1,36 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { ASSETS } from '../constants/assets'
 
 const coCurricularItems = [
+  {
+    period: '2026 - 2027',
+    role: 'Website Development Team - Leader',
+    organization: 'JKLU Sankalp 2027 - Flagship Social & Cultural Initiative',
+    category: 'Technical Leadership',
+    description:
+      'Spearheading the architecture, frontend engineering, and deployment of the official JKLU Sankalp web portal, directing full-stack development, database architecture, and team workflows.',
+    brandLogos: [
+      {
+        name: 'JKLU Sankalp',
+        image: ASSETS.logos.sankalpLogo,
+        darkImage: ASSETS.logos.sankalpLogoDarkbg,
+      },
+      { name: 'JKLU', image: ASSETS.logos.jklu, darkImage: ASSETS.logos.jkluDarkbg },
+    ],
+  },
+  {
+    period: '2026',
+    role: 'Tech & Support - Core',
+    organization: 'Sabrang 2026 - Annual University Cultural Fest',
+    category: 'Technical Operations',
+    description:
+      'Served as a core member of the Technical & Support committee, overseeing portal reliability, on-ground digital infrastructure, and coordination across major festival events.',
+    brandLogos: [
+      { name: 'Sabrang 2026', image: ASSETS.logos.sabrang25 },
+      { name: 'JKLU', image: ASSETS.logos.jklu, darkImage: ASSETS.logos.jkluDarkbg },
+    ],
+  },
   {
     period: '2025',
     role: 'Core Team - Sponsorships',
@@ -10,8 +39,8 @@ const coCurricularItems = [
     description:
       "Led sponsorship outreach and corporate partnership operations for the university's flagship national hackathon. Built and maintained a structured outreach database of 500+ prospective sponsors across 24 sectors and prepared analytical partnership progress reports.",
     brandLogos: [
-      { name: 'HackJKLU v5.0', image: '/logos/hackjkluv5.0.webp' },
-      { name: 'JKLU', image: '/logos/jklu.jpg', darkImage: '/logos/jklu-darkbg.png' },
+      { name: 'HackJKLU v5.0', image: ASSETS.logos.hackjkluv5 },
+      { name: 'JKLU', image: ASSETS.logos.jklu, darkImage: ASSETS.logos.jkluDarkbg },
     ],
   },
   {
@@ -22,8 +51,8 @@ const coCurricularItems = [
     description:
       "Headed the technical development team responsible for engineering, testing, and deploying the university's official orientation web platform, collaborating across committees for seamless student onboarding.",
     brandLogos: [
-      { name: 'AARAMBH 2025', image: '/logos/aarambh25.jpg' },
-      { name: 'JKLU', image: '/logos/jklu.jpg', darkImage: '/logos/jklu-darkbg.png' },
+      { name: 'AARAMBH 2025', image: ASSETS.logos.aarambh25 },
+      { name: 'JKLU', image: ASSETS.logos.jklu, darkImage: ASSETS.logos.jkluDarkbg },
     ],
   },
   {
@@ -34,8 +63,8 @@ const coCurricularItems = [
     description:
       'Engineered and maintained the official festival portal (sabrang.jklu.edu.in) with responsive user interfaces, real-time schedule tracking, and dynamic registration workflows.',
     brandLogos: [
-      { name: 'Sabrang 2025', image: '/logos/sabrang25.webp' },
-      { name: 'JKLU', image: '/logos/jklu.jpg', darkImage: '/logos/jklu-darkbg.png' },
+      { name: 'Sabrang 2025', image: ASSETS.logos.sabrang25 },
+      { name: 'JKLU', image: ASSETS.logos.jklu, darkImage: ASSETS.logos.jkluDarkbg },
     ],
   },
   {
@@ -46,8 +75,8 @@ const coCurricularItems = [
     description:
       'Supported on-ground technical infrastructure management, networking operations, and coordination for the national-level NASSCOM Technology Confluence at JKLU.',
     brandLogos: [
-      { name: 'NASSCOM', image: '/logos/nasscom.webp' },
-      { name: 'JKLU', image: '/logos/jklu.jpg', darkImage: '/logos/jklu-darkbg.png' },
+      { name: 'NASSCOM', image: ASSETS.logos.nasscom },
+      { name: 'JKLU', image: ASSETS.logos.jklu, darkImage: ASSETS.logos.jkluDarkbg },
     ],
   },
   {
@@ -58,7 +87,7 @@ const coCurricularItems = [
     description:
       'Volunteered as a community instructor supporting weekend learning sessions for underprivileged students, teaching foundational digital literacy and mathematics fundamentals.',
     brandLogos: [
-      { name: 'JKLU', image: '/logos/jklu.jpg', darkImage: '/logos/jklu-darkbg.png' },
+      { name: 'JKLU', image: ASSETS.logos.jklu, darkImage: ASSETS.logos.jkluDarkbg },
     ],
   },
 ]

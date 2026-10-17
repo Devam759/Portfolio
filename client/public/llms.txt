@@ -1,4 +1,4 @@
-# Devam Gupta — Developer & Software Engineering Portfolio
+# Devam Gupta - Developer & Software Engineering Portfolio
 
 > Full-Stack Developer and Computer Science undergraduate with hands-on experience across React.js, Next.js, Node.js, and Flutter/Firebase. Proven track record leading technical and sponsorship teams for university-scale events, building production-grade web and mobile applications, and applying Generative AI workflows.
 
@@ -35,8 +35,8 @@
 
 ## Certifications & Achievements
 - 4th Place Winner, HACKSTORM 2024 National Hackathon among 70+ competing teams (production-ready MERN application).
-- Machine Learning Operations (MLOps) for Generative AI — Google (Jun 2025)
-- Generative AI for Everyone — DeepLearning.AI (Jan 2025)
-- Google Prompting Essentials — Google (Jan 2025)
-- Introduction to Git and GitHub — Google (Jan 2025)
-- Programming for Everybody — University of Michigan (Dec 2024)
+- Machine Learning Operations (MLOps) for Generative AI - Google (Jun 2025)
+- Generative AI for Everyone - DeepLearning.AI (Jan 2025)
+- Google Prompting Essentials - Google (Jan 2025)
+- Introduction to Git and GitHub - Google (Jan 2025)
+- Programming for Everybody - University of Michigan (Dec 2024)

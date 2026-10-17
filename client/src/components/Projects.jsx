@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
+import { ASSETS } from '../constants/assets'
 
 const projects = [
   {
@@ -9,78 +10,112 @@ const projects = [
     category: 'Full Stack',
     description:
       'Cross-platform smart hostel tracking & attendance platform at JKLU with role-based access for Students and Wardens, featuring facial recognition attendance via MobileFaceNet and leave management.',
-    stack: ['React', 'Node.js', 'Flutter', 'Firebase', 'TFLite'],
-    image: '/images/projects/VISTA.webp',
+    stack: ['Flutter', 'React', 'Firebase', 'TFLite', 'Node.js'],
+    image: ASSETS.projects.vista,
     live: 'https://vista-jklu.web.app',
-    github: 'https://github.com/Devam759/VISTA.git',
+    github: 'https://github.com/Devam759/VISTA-APP',
   },
   {
     id: 2,
+    title: 'Sabrang 2026',
+    category: 'Full Stack',
+    description:
+      'Official modern festival web platform for Sabrang 2026 at JKLU, featuring high-performance responsive UI, event catalog, dynamic registrations, and ticketing.',
+    stack: ['Next.js', 'React', 'TypeScript', 'Tailwind', 'Framer Motion'],
+    image: ASSETS.projects.sabrang26,
+    live: 'https://sabrang-26.vercel.app',
+    github: 'https://github.com/Devam759/Sabrang-26',
+  },
+  {
+    id: 3,
+    title: 'JKLU Sankalp 2027',
+    category: 'Full Stack',
+    description:
+      'Flagship social and cultural web portal engineered for JKLU Sankalp, featuring program showcases, community outreach, and dynamic interactive modules.',
+    stack: ['React', 'TypeScript', 'Tailwind', 'Next.js'],
+    image: ASSETS.projects.jkluSankalp,
+    live: 'https://sankalp-27.vercel.app',
+    github: 'https://github.com/Devam759/sankalp-27',
+  },
+  {
+    id: 4,
     title: 'StitchUp',
     category: 'Full Stack',
     description:
       'Doorstep tailor-on-demand platform connecting clients with local tailors, featuring real-time booking, automated measurement tracking, and live delivery status updates.',
     stack: ['React', 'Express.js', 'MongoDB', 'Node.js', 'Tailwind'],
-    image: '/images/projects/StitchUp.webp',
+    image: ASSETS.projects.stitchup,
     live: 'https://stitchup-1af69.web.app',
-    github: 'https://github.com/ParthDhoot27/stichUP.git',
-  },
-  {
-    id: 3,
-    title: "SABRANG'25",
-    category: 'Full Stack',
-    description:
-      "Official festival website for JKLU's annual national fest featuring dynamic event schedules, attendee registrations, responsive UI, and high-performance asset delivery.",
-    stack: ['Next.js', 'React', 'Tailwind', 'JavaScript'],
-    image: '/images/projects/SABRANG.webp',
-    live: 'https://sabrang.jklu.edu.in',
-    github: 'https://github.com/suryaansh001/Sabrang25First_Draft.git',
-  },
-  {
-    id: 4,
-    title: "AARAMBH'25",
-    category: 'Full Stack',
-    description:
-      "Official web platform for JKLU's university orientation program, coordinating digital schedules, incoming student onboarding, and interactive modules.",
-    stack: ['HTML', 'CSS', 'JavaScript', 'React'],
-    image: '/images/projects/AARAMBH.webp',
-    live: 'https://aarambh-demo.vercel.app/',
-    github: 'https://github.com/aman67032/aarambh_demo.git',
+    github: 'https://github.com/Devam759/StitchUp-Firebase',
   },
   {
     id: 5,
-    title: "Hacker's Unity",
-    category: 'UI/UX',
+    title: 'Pindi Traders',
+    category: 'Frontend',
     description:
-      'A self-designed UI project aimed at enhancing the user experience and interface of a hackathon conducting brand.',
-    stack: ['React', 'Framer Motion', 'Tailwind'],
-    image: '/images/projects/Hackers_Unity.webp',
-    live: 'https://hackers-unity.vercel.app/',
-    github: 'https://github.com/Devam759/Hackers-Unity.git',
+      'Commercial wholesale and distribution catalog website featuring responsive product showcases, inquiry generation, and clean brand storytelling.',
+    stack: ['React', 'TypeScript', 'Tailwind', 'Vite'],
+    image: ASSETS.projects.pindiTraders,
+    live: 'https://pindi-traders.vercel.app',
+    github: 'https://github.com/Devam759/Pindi-Traders',
   },
   {
     id: 6,
+    title: 'AARAMBH 2026',
+    category: 'Full Stack',
+    description:
+      'Comprehensive web portal for the university orientation program, coordinating digital schedules, incoming student onboarding, and interactive modules.',
+    stack: ['React', 'TypeScript', 'Tailwind', 'Firebase'],
+    image: ASSETS.projects.aarambh26,
+    live: 'https://aarambh-26.web.app',
+    github: 'https://github.com/Devam759/aarambh-26',
+  },
+  {
+    id: 7,
+    title: 'JKLU Got Latent',
+    category: 'Frontend',
+    description:
+      'Interactive talent competition voting and scoring web platform with real-time judge scoring, dynamic contestant showcases, and responsive leaderboard.',
+    stack: ['JavaScript', 'React', 'Tailwind', 'Vercel'],
+    image: ASSETS.projects.jkluGotLatent,
+    live: 'https://jklu-got-latent.vercel.app',
+    github: 'https://github.com/Devam759/JKLU-GOT-LATENT',
+  },
+  {
+    id: 8,
     title: 'Anokhi',
     category: 'UI/UX',
     description:
-      'A personal frontend project focused on redesigning and modernizing the UI of a cultural fashion brand.',
-    stack: ['React', 'Next.js', 'Tailwind'],
-    image: '/images/projects/Anokhi.webp',
+      'Personal frontend design project focused on redesigning and modernizing the digital e-commerce UI of a cultural fashion brand.',
+    stack: ['React', 'TypeScript', 'Tailwind', 'Next.js'],
+    image: ASSETS.projects.anokhi,
     live: 'https://anokhi.vercel.app/',
-    github: 'https://github.com/Devam759/Anokhi.git',
+    github: 'https://github.com/Devam759/Anokhi',
+  },
+  {
+    id: 9,
+    title: 'Browser Vigilant',
+    category: 'Full Stack',
+    description:
+      'Web-based proctoring and browser integrity monitor designed to detect tab switching, multi-display anomalies, and focus violations during online assessments.',
+    stack: ['JavaScript', 'React', 'Tailwind', 'Web APIs'],
+    live: 'https://browser-vigilant.vercel.app',
+    github: 'https://github.com/Devam759/Browser-Vigilant',
+  },
+  {
+    id: 10,
+    title: 'All About Ramayana',
+    category: 'Frontend',
+    description:
+      'Interactive digital storytelling and educational platform exploring the epic Ramayana with thematic visual narratives, character guides, and audio elements.',
+    stack: ['JavaScript', 'HTML5', 'CSS3', 'Firebase'],
+    image: ASSETS.projects.allAboutRamayana,
+    live: 'http://all-about-ramayana.web.app',
+    github: 'https://github.com/Devam759/All-About-Ramayana',
   },
 ]
 
-const filterTabs = ['All', 'Full Stack']
-
 export default function Projects() {
-  const [activeTab, setActiveTab] = useState('All')
-
-  const filteredProjects =
-    activeTab === 'All'
-      ? projects
-      : projects.filter((p) => p.category === activeTab)
-
   return (
     <section id="projects" className="py-20 md:py-24 bg-white dark:bg-[#0a0a0c] transition-colors">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
@@ -89,7 +124,7 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4 font-display text-gray-900 dark:text-white tracking-tight">
             Projects Showcase
@@ -99,47 +134,39 @@ export default function Projects() {
             Featured full-stack web applications and user interfaces with live deployments and open source code.
           </p>
         </motion.div>
-
-        {/* Filter / Sort Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
-          {filterTabs.map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`cursor-target px-5 py-2 rounded-none text-xs md:text-sm font-semibold transition-all font-sans border ${
-                activeTab === tab
-                  ? 'bg-black text-white dark:bg-white dark:text-black border-black dark:border-white shadow-sm'
-                  : 'bg-gray-50 dark:bg-white/5 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-white/10 hover:border-black dark:hover:border-white'
-              }`}
-            >
-              {tab}
-            </button>
-          ))}
-        </div>
         
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {filteredProjects.map((project, index) => (
+          {projects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="group bg-white dark:bg-[#121216] rounded-none shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-white/10 hover:border-black dark:hover:border-white flex flex-col justify-between"
+              className="group bg-white dark:bg-[#121216] rounded-none shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-white/10 flex flex-col justify-between"
             >
               <div>
                 {project.image ? (
-                  <div className="relative w-full bg-neutral-100 dark:bg-neutral-900 border-b border-gray-200 dark:border-white/10">
+                  <div className="relative w-full aspect-[16/9] bg-neutral-100 dark:bg-neutral-900 overflow-hidden">
                     <img
                       src={project.image}
                       alt={`${project.title} - ${project.category} Project Showcase by Devam Gupta`}
-                      className="w-full h-auto block object-contain transition-opacity duration-200"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       loading="lazy"
                     />
                   </div>
                 ) : (
-                  <div className="aspect-[2/1] bg-gradient-to-br from-gray-100 to-gray-200 dark:from-white/5 dark:to-white/10" />
+                  <div className="aspect-[16/9] bg-gradient-to-br from-neutral-100 via-neutral-50 to-neutral-200 dark:from-neutral-900 dark:via-[#15151a] dark:to-neutral-900 flex items-center justify-center p-6 text-center">
+                    <div>
+                      <span className="text-xs font-mono font-semibold tracking-wider text-gray-400 dark:text-gray-500 uppercase">
+                        {project.category}
+                      </span>
+                      <h4 className="text-lg font-bold font-display text-gray-800 dark:text-gray-200 mt-1">
+                        {project.title}
+                      </h4>
+                    </div>
+                  </div>
                 )}
 
                 <div className="p-6">
@@ -172,15 +199,21 @@ export default function Projects() {
                   <FaGithub className="text-sm" />
                   GITHUB REPO
                 </a>
-                <a
-                  href={project.live}
-                  className="cursor-target inline-flex items-center gap-1.5 text-gray-900 dark:text-gray-200 hover:text-gray-500 dark:hover:text-white transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaExternalLinkAlt className="text-xs" />
-                  LIVE DEMO
-                </a>
+                {project.live ? (
+                  <a
+                    href={project.live}
+                    className="cursor-target inline-flex items-center gap-1.5 text-gray-900 dark:text-gray-200 hover:text-gray-500 dark:hover:text-white transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaExternalLinkAlt className="text-xs" />
+                    LIVE DEMO
+                  </a>
+                ) : (
+                  <span className="text-gray-400 dark:text-gray-500 text-[11px] font-medium tracking-wide">
+                    REPOSITORY ONLY
+                  </span>
+                )}
               </div>
             </motion.div>
           ))}

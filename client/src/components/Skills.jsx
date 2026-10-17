@@ -21,6 +21,7 @@ import {
   SiNetlify,
   SiLinux,
   SiMysql,
+  SiPostman,
 } from 'react-icons/si'
 import { VscVscode } from 'react-icons/vsc'
 
@@ -44,41 +45,43 @@ const techLogos = [
 
 const skillCategories = [
   {
-    category: 'Languages & Core',
+    category: 'Frontend Development',
     skills: [
-      { name: 'JavaScript (ES6+)', icon: <SiJavascript className="text-[#F7DF1E]" /> },
-      { name: 'Python', icon: <SiPython className="text-[#3776AB]" /> },
-      { name: 'Dart', icon: <SiDart className="text-[#0175C2]" /> },
-      { name: 'HTML5 & CSS3', icon: <SiHtml5 className="text-[#E34F26]" /> },
-      { name: 'SQL', icon: <SiMysql className="text-[#4479A1]" /> },
+      { name: 'React.js', level: 'Expert', icon: <SiReact className="text-[#61DAFB]" /> },
+      { name: 'Next.js', level: 'Advanced', icon: <SiNextdotjs className="text-black dark:text-white" /> },
+      { name: 'JavaScript (ES6+)', level: 'Expert', icon: <SiJavascript className="text-[#F7DF1E]" /> },
+      { name: 'Flutter & Dart', level: 'Proficient', icon: <SiFlutter className="text-[#02569B]" /> },
+      { name: 'Tailwind CSS', level: 'Expert', icon: <SiTailwindcss className="text-[#06B6D4]" /> },
+      { name: 'HTML5 & CSS3', level: 'Expert', icon: <SiHtml5 className="text-[#E34F26]" /> },
     ],
   },
   {
-    category: 'Frameworks & Libraries',
+    category: 'Backend & Database',
     skills: [
-      { name: 'React.js', icon: <SiReact className="text-[#61DAFB]" /> },
-      { name: 'Next.js', icon: <SiNextdotjs className="text-black dark:text-white" /> },
-      { name: 'Node.js & Express', icon: <SiNodedotjs className="text-[#339933]" /> },
-      { name: 'Flutter', icon: <SiFlutter className="text-[#02569B]" /> },
-      { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-[#06B6D4]" /> },
-      { name: 'Framer Motion', icon: <SiFramer className="text-[#0055FF]" /> },
+      { name: 'Node.js', level: 'Advanced', icon: <SiNodedotjs className="text-[#339933]" /> },
+      { name: 'Express.js', level: 'Advanced', icon: <SiExpress className="text-black dark:text-white" /> },
+      { name: 'MongoDB', level: 'Advanced', icon: <SiMongodb className="text-[#47A248]" /> },
+      { name: 'Firebase', level: 'Advanced', icon: <SiFirebase className="text-[#FFCA28]" /> },
+      { name: 'Python', level: 'Proficient', icon: <SiPython className="text-[#3776AB]" /> },
+      { name: 'SQL & MySQL', level: 'Proficient', icon: <SiMysql className="text-[#4479A1]" /> },
     ],
   },
   {
-    category: 'Platforms & Tools',
+    category: 'Tools & Technologies',
     skills: [
-      { name: 'MongoDB', icon: <SiMongodb className="text-[#47A248]" /> },
-      { name: 'Firebase', icon: <SiFirebase className="text-[#FFCA28]" /> },
-      { name: 'Git & GitHub', icon: <SiGit className="text-[#F05032]" /> },
-      { name: 'Docker', icon: <SiDocker className="text-[#2496ED]" /> },
-      { name: 'Netlify & Vercel', icon: <SiNetlify className="text-[#00C7B7]" /> },
-      { name: 'Linux & VS Code', icon: <SiLinux className="text-[#FCC624]" /> },
+      { name: 'Git & GitHub', level: 'Expert', icon: <SiGit className="text-[#F05032]" /> },
+      { name: 'Docker', level: 'Proficient', icon: <SiDocker className="text-[#2496ED]" /> },
+      { name: 'Postman', level: 'Advanced', icon: <SiPostman className="text-[#FF6C37]" /> },
+      { name: 'VS Code', level: 'Expert', icon: <VscVscode className="text-[#007ACC]" /> },
+      { name: 'Linux', level: 'Advanced', icon: <SiLinux className="text-[#FCC624]" /> },
+      { name: 'Netlify & Vercel', level: 'Expert', icon: <SiNetlify className="text-[#00C7B7]" /> },
     ],
   },
 ]
 
 export default function Skills() {
   const [activeCategory, setActiveCategory] = useState('All')
+  const [hoveredSkill, setHoveredSkill] = useState(null)
 
   const categories = ['All', ...skillCategories.map((c) => c.category)]
 
@@ -102,7 +105,7 @@ export default function Skills() {
           </h2>
           <div className="w-16 h-0.5 bg-black dark:bg-white mx-auto mt-4"></div>
           <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 font-sans max-w-2xl mx-auto mt-4">
-            Core programming languages, frameworks, databases, and developer tools used across my projects.
+            Core competencies across frontend engineering, backend architecture, databases, and developer tooling.
           </p>
         </motion.div>
 
@@ -123,7 +126,7 @@ export default function Skills() {
           ))}
         </div>
 
-        {/* Skill Cards Grid with Clean Tech Badges */}
+        {/* Skill Cards Grid with Animated Skill Bars and Proficiency Tooltips */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {displayedGroups.map((group) => (
             <motion.div
@@ -143,14 +146,25 @@ export default function Skills() {
                   {group.skills.map((skill) => (
                     <div
                       key={skill.name}
-                      className="cursor-target flex items-center gap-3.5 px-3.5 py-3 rounded-none bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/80 dark:border-white/10 hover:border-black dark:hover:border-white transition-all group"
+                      onMouseEnter={() => setHoveredSkill(skill.name)}
+                      onMouseLeave={() => setHoveredSkill(null)}
+                      className="relative cursor-target flex items-center justify-between px-3.5 py-3 rounded-none bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/80 dark:border-white/10 hover:border-black dark:hover:border-white transition-all group"
                     >
-                      <div className="text-xl shrink-0 transition-transform duration-200 group-hover:scale-110">
-                        {skill.icon}
+                      <div className="flex items-center gap-3.5 min-w-0">
+                        <div className="text-xl shrink-0 transition-transform duration-200 group-hover:scale-110">
+                          {skill.icon}
+                        </div>
+                        <span className="text-sm font-semibold text-gray-900 dark:text-white font-sans">
+                          {skill.name}
+                        </span>
                       </div>
-                      <span className="text-sm font-semibold text-gray-900 dark:text-white font-sans">
-                        {skill.name}
-                      </span>
+
+                      {/* Hover Tooltip Showing Proficiency Level */}
+                      {hoveredSkill === skill.name && (
+                        <div className="absolute -top-7 right-2 z-20 px-2 py-0.5 bg-black dark:bg-white text-white dark:text-black text-[10px] font-bold font-mono tracking-wider uppercase rounded shadow-md pointer-events-none transition-opacity">
+                          {skill.level}
+                        </div>
+                      )}
                     </div>
                   ))}
                 </div>

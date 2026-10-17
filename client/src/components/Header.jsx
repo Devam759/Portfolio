@@ -4,29 +4,69 @@ import { FaSun, FaMoon, FaBars, FaTimes } from 'react-icons/fa'
 import { useTheme } from '../context/ThemeContext'
 
 const navLinks = [
-  { name: 'Home', href: '/#home' },
-  { name: 'About', href: '/#about' },
-  { name: 'Skills', href: '/#skills' },
-  { name: 'Projects', href: '/#projects' },
-  { name: 'Timeline', href: '/#timeline' },
-  { name: 'Volunteering', href: '/#cocurricular' },
-  { name: 'Certifications', href: '/#certifications' },
-  { name: 'Contact', href: '/#contact' },
+  { name: 'Home', id: 'home' },
+  { name: 'About', id: 'about' },
+  { name: 'Skills', id: 'skills' },
+  { name: 'Projects', id: 'projects' },
+  { name: 'Timeline', id: 'timeline' },
+  { name: 'Volunteering', id: 'cocurricular' },
+  { name: 'Certifications', id: 'certifications' },
+  { name: 'Contact', id: 'contact' },
 ]
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('home')
   const { theme, toggleTheme } = useTheme()
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
+
+      const scrollPosition = window.scrollY + 120
+      for (let i = navLinks.length - 1; i >= 0; i--) {
+        const section = document.getElementById(navLinks[i].id)
+        if (section) {
+          const top = section.offsetTop
+          if (scrollPosition >= top) {
+            setActiveSection(navLinks[i].id)
+            break
+          }
+        }
+      }
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  const scrollToSection = (e, targetId) => {
+    e.preventDefault()
+    setMobileMenuOpen(false)
+
+    if (targetId === 'home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+      window.history.pushState(null, '', '/')
+      setActiveSection('home')
+      return
+    }
+
+    const element = document.getElementById(targetId)
+    if (element) {
+      const navOffset = 80
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - navOffset
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      })
+      window.history.pushState(null, '', `#${targetId}`)
+      setActiveSection(targetId)
+    } else {
+      window.location.href = `/#${targetId}`
+    }
+  }
 
   return (
     <header className="fixed top-4 inset-x-0 z-50 flex flex-col items-center px-4 transition-all">
@@ -37,13 +77,18 @@ export default function Header() {
             : 'bg-white/80 dark:bg-[#121216]/80 backdrop-blur-sm border-black/5 dark:border-white/10 shadow-sm'
         }`}
       >
-        {/* Desktop Navigation Links */}
+        {/* Desktop Navigation Links with Smooth Animated Scroll */}
         <div className="hidden lg:flex items-center gap-1">
           {navLinks.map((link) => (
             <a
               key={link.name}
-              href={link.href}
-              className="text-xs font-semibold uppercase tracking-wider text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors font-sans px-3 py-1.5 rounded-full hover:bg-black/5 dark:hover:bg-white/10 cursor-target whitespace-nowrap"
+              href={`#${link.id}`}
+              onClick={(e) => scrollToSection(e, link.id)}
+              className={`text-xs font-semibold uppercase tracking-wider transition-all font-sans px-3 py-1.5 rounded-full cursor-target whitespace-nowrap ${
+                activeSection === link.id
+                  ? 'bg-black text-white dark:bg-white dark:text-black shadow-sm'
+                  : 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/10'
+              }`}
             >
               {link.name}
             </a>
@@ -89,9 +134,13 @@ export default function Header() {
             {navLinks.map((link) => (
               <a
                 key={link.name}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="block py-2 text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+                href={`#${link.id}`}
+                onClick={(e) => scrollToSection(e, link.id)}
+                className={`block py-2 text-xs font-bold uppercase tracking-wider transition-colors ${
+                  activeSection === link.id
+                    ? 'text-black dark:text-white font-extrabold'
+                    : 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white'
+                }`}
               >
                 {link.name}
               </a>
