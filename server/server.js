@@ -93,4 +93,14 @@ mongoose
     console.warn('[MongoDB Notice] To store contact form messages, start local MongoDB or provide MONGODB_URI in .env.')
   })
 
+// Keep-alive self-ping interval for Render free tier (every 14 minutes in production)
+if (process.env.NODE_ENV === 'production') {
+  const KEEP_ALIVE_URL = 'https://portfolio-api-devam.onrender.com/api/health'
+  setInterval(() => {
+    fetch(KEEP_ALIVE_URL)
+      .then((res) => console.log(`[Keep-Alive] Pinged ${KEEP_ALIVE_URL} - Status: ${res.status}`))
+      .catch((err) => console.warn(`[Keep-Alive] Ping notice:`, err.message))
+  }, 14 * 60 * 1000)
+}
+
 export default app
