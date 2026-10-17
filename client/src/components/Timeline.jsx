@@ -10,8 +10,8 @@ const timelineItems = [
     description:
       'Engineered and maintained production web platforms for Maruti Suzuki Arena and Nexa. Delivered responsive frontend interfaces, performed site maintenance, and contributed proactively across web development workflows.',
     brandLogos: [
-      { name: 'Hayagreeva Consulting', image: '/logos/haygreeva.webp' },
-      { name: 'Maruti Suzuki', image: '/logos/maruti-suzuki.webp' },
+      { name: 'Hayagreeva Consulting', image: '/logos/hayagreeva.png' },
+      { name: 'Maruti Suzuki', image: '/logos/maruti.png' },
     ],
   },
   {
@@ -22,7 +22,11 @@ const timelineItems = [
     description:
       'Undergraduate program covering Data Structures, Web Architectures, Database Systems, Object-Oriented Design, and Machine Learning workflows.',
     brandLogos: [
-      { name: 'JK Lakshmipat University', image: '/logos/jklu.webp' },
+      {
+        name: 'JK Lakshmipat University',
+        image: '/logos/jklu.jpg',
+        darkImage: '/logos/jklu-darkbg.png',
+      },
     ],
   },
 ]
@@ -69,11 +73,26 @@ export default function Timeline() {
                           title={brand.name}
                           className="w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center shrink-0 p-1 transition-transform hover:scale-105"
                         >
-                          <img
-                            src={brand.image}
-                            alt={`${brand.name} official brand logo`}
-                            className="w-full h-full object-contain"
-                          />
+                          {brand.darkImage ? (
+                            <>
+                              <img
+                                src={brand.image}
+                                alt={`${brand.name} official brand logo`}
+                                className="w-full h-full object-contain dark:hidden"
+                              />
+                              <img
+                                src={brand.darkImage}
+                                alt={`${brand.name} official brand logo`}
+                                className="w-full h-full object-contain hidden dark:block"
+                              />
+                            </>
+                          ) : (
+                            <img
+                              src={brand.image}
+                              alt={`${brand.name} official brand logo`}
+                              className="w-full h-full object-contain"
+                            />
+                          )}
                         </div>
                       ))}
                     </div>

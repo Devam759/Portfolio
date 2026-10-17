@@ -11,7 +11,7 @@ const coCurricularItems = [
       "Led sponsorship outreach and corporate partnership operations for the university's flagship national hackathon. Built and maintained a structured outreach database of 500+ prospective sponsors across 24 sectors and prepared analytical partnership progress reports.",
     brandLogos: [
       { name: 'HackJKLU v5.0', image: '/logos/hackjkluv5.0.webp' },
-      { name: 'JKLU', image: '/logos/jklu.webp' },
+      { name: 'JKLU', image: '/logos/jklu.jpg', darkImage: '/logos/jklu-darkbg.png' },
     ],
   },
   {
@@ -22,8 +22,8 @@ const coCurricularItems = [
     description:
       "Headed the technical development team responsible for engineering, testing, and deploying the university's official orientation web platform, collaborating across committees for seamless student onboarding.",
     brandLogos: [
-      { name: 'AARAMBH 2025', image: '/logos/aarambh25.webp' },
-      { name: 'JKLU', image: '/logos/jklu.webp' },
+      { name: 'AARAMBH 2025', image: '/logos/aarambh25.jpg' },
+      { name: 'JKLU', image: '/logos/jklu.jpg', darkImage: '/logos/jklu-darkbg.png' },
     ],
   },
   {
@@ -35,7 +35,7 @@ const coCurricularItems = [
       'Engineered and maintained the official festival portal (sabrang.jklu.edu.in) with responsive user interfaces, real-time schedule tracking, and dynamic registration workflows.',
     brandLogos: [
       { name: 'Sabrang 2025', image: '/logos/sabrang25.webp' },
-      { name: 'JKLU', image: '/logos/jklu.webp' },
+      { name: 'JKLU', image: '/logos/jklu.jpg', darkImage: '/logos/jklu-darkbg.png' },
     ],
   },
   {
@@ -47,7 +47,7 @@ const coCurricularItems = [
       'Supported on-ground technical infrastructure management, networking operations, and coordination for the national-level NASSCOM Technology Confluence at JKLU.',
     brandLogos: [
       { name: 'NASSCOM', image: '/logos/nasscom.webp' },
-      { name: 'JKLU', image: '/logos/jklu.webp' },
+      { name: 'JKLU', image: '/logos/jklu.jpg', darkImage: '/logos/jklu-darkbg.png' },
     ],
   },
   {
@@ -58,7 +58,7 @@ const coCurricularItems = [
     description:
       'Volunteered as a community instructor supporting weekend learning sessions for underprivileged students, teaching foundational digital literacy and mathematics fundamentals.',
     brandLogos: [
-      { name: 'JKLU', image: '/logos/jklu.webp' },
+      { name: 'JKLU', image: '/logos/jklu.jpg', darkImage: '/logos/jklu-darkbg.png' },
     ],
   },
 ]
@@ -101,11 +101,26 @@ export default function CoCurricular() {
                         title={brand.name}
                         className="w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center shrink-0 p-1 transition-transform hover:scale-105"
                       >
-                        <img
-                          src={brand.image}
-                          alt={`${brand.name} official emblem logo`}
-                          className="w-full h-full object-contain"
-                        />
+                        {brand.darkImage ? (
+                          <>
+                            <img
+                              src={brand.image}
+                              alt={`${brand.name} official emblem logo`}
+                              className="w-full h-full object-contain dark:hidden"
+                            />
+                            <img
+                              src={brand.darkImage}
+                              alt={`${brand.name} official emblem logo`}
+                              className="w-full h-full object-contain hidden dark:block"
+                            />
+                          </>
+                        ) : (
+                          <img
+                            src={brand.image}
+                            alt={`${brand.name} official emblem logo`}
+                            className="w-full h-full object-contain"
+                          />
+                        )}
                       </div>
                     ))}
                   </div>
