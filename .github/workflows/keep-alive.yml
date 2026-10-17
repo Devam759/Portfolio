@@ -1,0 +1,27 @@
+name: Keep Render Backend Awake
+
+on:
+  schedule:
+    # Runs every 14 minutes (Render free tier sleeps after 15 minutes of inactivity)
+    - cron: '*/14 * * * *'
+  workflow_dispatch: # Allows manual trigger from the GitHub Actions tab anytime
+
+jobs:
+  ping-render:
+    name: Ping Render Health Check
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Ping Render Backend
+        run: |
+          echo "Pinging https://portfolio-api-devam.onrender.com/api/health..."
+          RESPONSE=$(curl -s -w "\nHTTP_STATUS:%{http_code}" https://portfolio-api-devam.onrender.com/api/health)
+          echo "$RESPONSE"
+          STATUS=$(echo "$RESPONSE" | grep "HTTP_STATUS" | cut -d':' -f2)
+          if [ "$STATUS" -ge 200 ] && [ "$STATUS" -lt 400 ]; then
+            echo "Render backend is alive and healthy (Status $STATUS)."
+          else
+            echo "Warning: Render health check returned HTTP $STATUS"
+            exit 1
+          fi
