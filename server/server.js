@@ -4,6 +4,7 @@ import dotenv from 'dotenv'
 import mongoose from 'mongoose'
 import contactRoutes from './routes/contact.js'
 import resumeRoutes from './routes/resume.js'
+import { getEmailStatus } from './utils/email.js'
 
 dotenv.config()
 
@@ -52,6 +53,7 @@ app.get('/api/health', (req, res) => {
     status: 'ok',
     message: 'Portfolio Backend Server is healthy and operational.',
     database: dbStatus,
+    email: getEmailStatus(),
     timestamp: new Date().toISOString(),
   })
 })
