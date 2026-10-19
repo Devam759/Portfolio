@@ -71,7 +71,7 @@ export default function Header() {
   return (
     <header className="fixed top-4 inset-x-0 z-50 flex flex-col items-center px-4 transition-all">
       <nav
-        className={`flex items-center justify-between border rounded-full px-4 py-2 md:px-6 md:py-2.5 transition-all duration-300 gap-2 max-w-5xl ${
+        className={`w-full max-w-sm sm:max-w-md lg:max-w-5xl flex items-center justify-between border rounded-full px-4 py-2 md:px-6 md:py-2.5 transition-all duration-300 ${
           isScrolled
             ? 'bg-white/95 dark:bg-[#121216]/95 backdrop-blur-md border-black/10 dark:border-white/15 shadow-md'
             : 'bg-white/80 dark:bg-[#121216]/80 backdrop-blur-sm border-black/5 dark:border-white/10 shadow-sm'
@@ -95,27 +95,27 @@ export default function Header() {
           ))}
         </div>
 
-        {/* Mobile Navigation Toggle (lg:hidden) */}
-        <div className="flex lg:hidden items-center gap-2">
+        {/* Mobile Left: Navigation Menu Toggle (lg:hidden) */}
+        <div className="flex lg:hidden items-center">
           <button
-            className="p-1.5 text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white cursor-target"
+            className="flex items-center gap-2 py-1.5 px-2 -ml-1 text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors cursor-target"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <FaTimes className="text-base" /> : <FaBars className="text-base" />}
+            <span className="text-xs font-bold uppercase tracking-wider font-sans text-gray-900 dark:text-white">
+              Menu
+            </span>
           </button>
-          <span className="text-xs font-bold uppercase tracking-wider font-sans text-gray-900 dark:text-white">
-            Menu
-          </span>
         </div>
 
-        {/* Theme Toggle Button */}
-        <div className="flex items-center pl-2 border-l border-gray-200 dark:border-white/10 ml-1">
+        {/* Right: Theme Toggle Button */}
+        <div className="flex items-center lg:pl-3 lg:border-l lg:border-gray-200 lg:dark:border-white/10">
           <button
             onClick={toggleTheme}
             aria-label="Toggle Dark/Light Mode"
             title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} Mode`}
-            className="cursor-target p-1.5 rounded-full text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
+            className="cursor-target p-1.5 rounded-full text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/10 transition-colors flex items-center justify-center"
           >
             {theme === 'dark' ? <FaSun className="text-yellow-400 text-sm" /> : <FaMoon className="text-gray-700 text-sm" />}
           </button>
@@ -126,25 +126,28 @@ export default function Header() {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="lg:hidden mt-2 bg-white/95 dark:bg-[#121216]/95 backdrop-blur-md border border-black/10 dark:border-white/20 rounded-2xl shadow-xl px-6 py-4 w-60 text-center font-sans"
+            initial={{ opacity: 0, y: -8, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -8, scale: 0.98 }}
+            transition={{ duration: 0.2 }}
+            className="lg:hidden mt-2 bg-white/95 dark:bg-[#121216]/95 backdrop-blur-md border border-black/10 dark:border-white/20 rounded-2xl shadow-xl px-4 py-3 w-full max-w-sm sm:max-w-md text-center font-sans"
           >
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={`#${link.id}`}
-                onClick={(e) => scrollToSection(e, link.id)}
-                className={`block py-2 text-xs font-bold uppercase tracking-wider transition-colors ${
-                  activeSection === link.id
-                    ? 'text-black dark:text-white font-extrabold'
-                    : 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white'
-                }`}
-              >
-                {link.name}
-              </a>
-            ))}
+            <div className="grid grid-cols-2 gap-1">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={`#${link.id}`}
+                  onClick={(e) => scrollToSection(e, link.id)}
+                  className={`py-2 px-3 text-xs font-bold uppercase tracking-wider rounded-xl transition-colors ${
+                    activeSection === link.id
+                      ? 'bg-black text-white dark:bg-white dark:text-black'
+                      : 'text-gray-700 dark:text-gray-300 hover:bg-black/5 dark:hover:bg-white/10 hover:text-black dark:hover:text-white'
+                  }`}
+                >
+                  {link.name}
+                </a>
+              ))}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
