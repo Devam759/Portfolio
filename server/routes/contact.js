@@ -60,7 +60,7 @@ router.post('/', async (req, res) => {
   }
 })
 
-// GET /api/contact - Retrieve submissions (for evaluation / verification)
+// GET /api/contact - Retrieve submissions (health & admin verification)
 router.get('/', async (req, res) => {
   try {
     const contacts = await Contact.find().sort({ createdAt: -1 }).limit(50)
