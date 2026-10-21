@@ -8,10 +8,12 @@ import Projects from './components/Projects'
 import Timeline from './components/Timeline'
 import CoCurricular from './components/CoCurricular'
 import Certifications from './components/Certifications'
+import FAQ from './components/FAQ'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import TargetCursor from './components/TargetCursor'
 import NotFound from './components/NotFound'
+import SEO from './components/SEO'
 
 function Home({ targetSection }) {
   const location = useLocation()
@@ -41,6 +43,7 @@ function Home({ targetSection }) {
         <Timeline />
         <CoCurricular />
         <Certifications />
+        <FAQ />
         <Contact />
       </main>
       <Footer />
@@ -50,18 +53,22 @@ function Home({ targetSection }) {
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<Home targetSection="about" />} />
-      <Route path="/skills" element={<Home targetSection="skills" />} />
-      <Route path="/projects" element={<Home targetSection="projects" />} />
-      <Route path="/timeline" element={<Home targetSection="timeline" />} />
-      <Route path="/volunteering" element={<Home targetSection="cocurricular" />} />
-      <Route path="/cocurricular" element={<Home targetSection="cocurricular" />} />
-      <Route path="/certifications" element={<Home targetSection="certifications" />} />
-      <Route path="/contact" element={<Home targetSection="contact" />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <>
+      <SEO />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<Home targetSection="about" />} />
+        <Route path="/skills" element={<Home targetSection="skills" />} />
+        <Route path="/projects" element={<Home targetSection="projects" />} />
+        <Route path="/timeline" element={<Home targetSection="timeline" />} />
+        <Route path="/volunteering" element={<Home targetSection="cocurricular" />} />
+        <Route path="/cocurricular" element={<Home targetSection="cocurricular" />} />
+        <Route path="/certifications" element={<Home targetSection="certifications" />} />
+        <Route path="/faq" element={<Home targetSection="faq" />} />
+        <Route path="/contact" element={<Home targetSection="contact" />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </>
   )
 }
 

@@ -1,42 +1,33 @@
-# Devam Gupta - Developer & Software Engineering Portfolio
+# Devam Gupta - Full-Stack Developer & Software Engineer Portfolio
 
-> Full-Stack Developer and Computer Science undergraduate with hands-on experience across React.js, Next.js, Node.js, and Flutter/Firebase. Proven track record leading technical and sponsorship teams for university-scale events, building production-grade web and mobile applications, and applying Generative AI workflows.
+> Devam Gupta is a Full-Stack Software Engineer and Computer Science undergraduate (B.Tech CSE, 2024–2028) at JK Lakshmipat University, Jaipur. He specializes in React, Next.js, Node.js, Express, MongoDB, and Flutter/Firebase, with hands-on enterprise internship experience at Hayagreeva Consulting Private Limited and university-scale tech leadership.
 
+## Identity & Contact
 - Name: Devam Gupta
-- Location: Jaipur / Bikaner, Rajasthan, India
-- Portfolio: https://portfoliodevam.netlify.app
+- Role: Full-Stack Developer & Software Engineer
+- University: JK Lakshmipat University, Jaipur (B.Tech CSE, 2024–2028)
+- Location: Jaipur / Bikaner, Rajasthan, India (IST / UTC+5:30)
+- Portfolio URL: https://portfoliodevam.netlify.app/
 - GitHub: https://github.com/Devam759
 - LinkedIn: https://linkedin.com/in/devam-gupta
+- Instagram: https://www.instagram.com/who.is.devam/
 - Email: devamg759@gmail.com
-- Phone: +91 7340015201
-- University: JK Lakshmipat University, Jaipur (B.Tech Computer Science and Engineering, 2024 - 2028)
+- Telephone: +91-7340015201
+- Full Context: https://portfoliodevam.netlify.app/llms-full.txt
 
-## Technical Expertise
-- Languages: JavaScript (ES6+), Python, Dart, SQL, HTML5, CSS3
-- Frontend: React.js, Next.js, Tailwind CSS, Framer Motion
-- Backend & APIs: Node.js, Express.js, RESTful Architecture, Webhooks
-- Databases & Cloud: MongoDB, Firebase Firestore / Realtime DB, TFLite
-- Developer Tools: Git, GitHub, VS Code, Linux, Docker, Netlify, Vercel
+## Key Sections
+- [About Devam Gupta](https://portfoliodevam.netlify.app/#about): Background, education at JKLU, engineering philosophy, and location.
+- [Technical Skills](https://portfoliodevam.netlify.app/#skills): MERN stack, TypeScript, Next.js, Flutter, Python, Docker, Tailwind CSS, REST APIs.
+- [Featured Projects](https://portfoliodevam.netlify.app/#projects): VISTA (hostel biometric attendance), Sabrang 2026 fest portal, JKLU Sankalp 2027, StitchUp (tailor on demand), Pindi Traders.
+- [Experience & Timeline](https://portfoliodevam.netlify.app/#timeline): Web Development Intern at Hayagreeva Consulting (Maruti Suzuki Arena and Nexa platforms).
+- [Leadership & Volunteering](https://portfoliodevam.netlify.app/#cocurricular): HackJKLU v5.0 Sponsorship Lead (500+ sponsors database), AARAMBH Tech Lead, NASSCOM Confluence operations.
+- [Certifications](https://portfoliodevam.netlify.app/#certifications): Google Generative AI MLOps, DeepLearning.AI, HACKSTORM 2024 4th place winner.
+- [Frequently Asked Questions](https://portfoliodevam.netlify.app/#faq): Direct answers to recruiters, hiring managers, and AI assistants.
+- [Contact](https://portfoliodevam.netlify.app/#contact): Direct contact form and communication channels.
 
-## Featured Projects
-- VISTA (Virtual Intelligent Student Tracking & Attendance): Cross-platform smart hostel management app used at JKLU with role-based access for Students, Wardens, and Head Wardens. Implemented facial recognition attendance using MobileFaceNet via TFLite (Flutter, Firebase, TFLite).
-- StitchUp: Doorstep tailor-on-demand platform connecting users with local tailors, featuring real-time booking, automated measurements, and order tracking (MERN Stack).
-- Sabrang 2025: Official festival web portal for JKLU's annual national cultural fest (sabrang.jklu.edu.in) featuring dynamic event schedules and high-performance frontend architecture (Next.js, React, Tailwind CSS).
-- AARAMBH 2025: Official orientation web platform for incoming university students at JK Lakshmipat University (React, JavaScript).
-
-## Work Experience
-- Web Development Intern at Hayagreeva Consulting Private Limited (May 2026 - Jul 2026): Engineered and maintained production web platforms for Maruti Suzuki Arena and Nexa, delivering responsive frontend interfaces and site maintenance across automotive web workflows.
-
-## Leadership & Volunteering
-- Core Team - Sponsorships, HackJKLU v5.0 (2025): Led corporate sponsorship outreach for the university's flagship national hackathon, managing a database of 500+ sponsor prospects across 24 sectors.
-- Tech Team Leader, AARAMBH 2025 (May 2025 - Jul 2025): Spearheaded the technical team engineering the university orientation web application.
-- Technical Operations Volunteer, NASSCOM Technology Confluence (Nov 2025): Supported on-ground technical infrastructure and networking operations.
-- Education Volunteer & Mentor, MuskaanShaala Initiative (Mar 2025 - May 2025): Taught foundational digital literacy and mathematics to underprivileged children.
-
-## Certifications & Achievements
-- 4th Place Winner, HACKSTORM 2024 National Hackathon among 70+ competing teams (production-ready MERN application).
-- Machine Learning Operations (MLOps) for Generative AI - Google (Jun 2025)
-- Generative AI for Everyone - DeepLearning.AI (Jan 2025)
-- Google Prompting Essentials - Google (Jan 2025)
-- Introduction to Git and GitHub - Google (Jan 2025)
-- Programming for Everybody - University of Michigan (Dec 2024)
+## Core Competencies
+- Frontend: React.js, Next.js, TypeScript, JavaScript (ES6+), Tailwind CSS, Framer Motion, HTML5, CSS3
+- Backend & APIs: Node.js, Express.js, RESTful Architecture, Webhooks, API Integration
+- Databases: MongoDB, Mongoose, Firebase Firestore, Firebase Realtime Database, SQLite
+- Mobile & Machine Learning: Flutter & Dart, TFLite (MobileFaceNet on-device face recognition)
+- DevOps & Tools: Git, GitHub, Docker, Postman, Linux, Netlify, Vercel, Render

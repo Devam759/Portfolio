@@ -1,6 +1,59 @@
+# robots.txt for Devam Gupta Portfolio
+# https://portfoliodevam.netlify.app
+
 User-agent: *
 Allow: /
 
-# Host & Sitemap
+# Explicit rules for Search Engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# Explicit rules for AI & Generative Answer Engines (AEO / GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Host, Sitemap & Machine-Readable LLM Context
 Host: https://portfoliodevam.netlify.app
 Sitemap: https://portfoliodevam.netlify.app/sitemap.xml

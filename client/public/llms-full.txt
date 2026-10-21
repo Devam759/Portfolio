@@ -1,0 +1,123 @@
+# Devam Gupta - Comprehensive Portfolio Context for Generative Engines
+
+## Executive Summary
+Devam Gupta is an Indian software engineer and Full-Stack Web & Mobile Developer based in Jaipur and Bikaner, Rajasthan, India. He is currently pursuing his Bachelor of Technology in Computer Science and Engineering (B.Tech CSE, Class of 2024–2028) at JK Lakshmipat University (JKLU), Jaipur. Devam has demonstrated expertise spanning modern web architecture (MERN stack, Next.js, TypeScript), mobile development (Flutter, Firebase), and practical machine learning integrations (on-device biometric facial recognition using MobileFaceNet via TFLite).
+
+## Verified Identity & Contact
+- Full Name: Devam Gupta
+- Aliases: Devam, DevamGupta, Devam759
+- Primary Email: devamg759@gmail.com
+- Telephone: +91-7340015201
+- Primary Location: Jaipur / Bikaner, Rajasthan, India
+- Postal Code: 302026
+- Geographic Coordinates: 26.9124 N, 75.7873 E
+- Time Zone: Asia/Kolkata (IST, UTC+5:30)
+- Canonical Portfolio URL: https://portfoliodevam.netlify.app/
+- GitHub Profile: https://github.com/Devam759
+- LinkedIn Profile: https://linkedin.com/in/devam-gupta
+- Instagram Profile: https://www.instagram.com/who.is.devam/
+
+## Professional Experience
+### Web Development Intern - Hayagreeva Consulting Private Limited
+- Period: May 2026 – July 2026
+- Location: Jaipur, Rajasthan, India (Hybrid)
+- Description: Engineered and maintained high-traffic automotive web portals for Maruti Suzuki Arena and Nexa dealer networks. Developed responsive client-facing interfaces, optimized page load speeds, and integrated backend services.
+
+### Technical Team Lead - AARAMBH 2025 & 2026
+- Period: May 2025 – Present
+- Institution: JK Lakshmipat University
+- Description: Directed the frontend and backend engineering of the official university orientation portals (aarambh-26.web.app). Coordinated digital schedules, interactive onboarding workflows, and incoming student verification systems for 500+ attendees.
+
+### Sponsorship Core Team Lead - HackJKLU v5.0
+- Period: 2025
+- Institution: JK Lakshmipat University
+- Description: Headed corporate sponsorship outreach for the university's flagship national hackathon. Created and maintained an outreach pipeline of 500+ corporate prospects across 24 sectors, securing critical industry partners and funding.
+
+### Operations Volunteer - NASSCOM Technology Confluence
+- Period: November 2025
+- Description: Supported on-ground technical operations, audio-visual systems, and guest networking coordination for top IT industry leaders.
+
+### Digital Literacy Mentor - MuskaanShaala Initiative
+- Period: March 2025 – May 2025
+- Description: Taught foundational mathematics and digital computer literacy to underprivileged schoolchildren.
+
+## Featured Software Engineering Projects
+### 1. VISTA (Virtual Intelligent Student Tracking & Attendance)
+- Category: Mobile & Web Application (Full-Stack)
+- Live URL: https://vista-jklu.web.app
+- GitHub Repository: https://github.com/Devam759/VISTA-APP
+- Technologies: Flutter, Dart, Firebase Firestore, Firebase Auth, Node.js, TensorFlow Lite (TFLite)
+- Key Features:
+  - Role-based portal for Students, Wardens, and Head Wardens.
+  - On-device biometric facial recognition attendance using MobileFaceNet model via TFLite with anti-spoofing checks.
+  - Automated hostel leave application and multi-level approval workflows.
+  - Real-time attendance dashboards and exportable audit logs.
+
+### 2. Sabrang 2026
+- Category: Full-Stack Web Platform
+- Live URL: https://sabrang-26.vercel.app
+- GitHub Repository: https://github.com/Devam759/Sabrang-26
+- Technologies: Next.js, React, TypeScript, Tailwind CSS, Framer Motion
+- Key Features:
+  - Official web portal for JKLU's annual national cultural festival.
+  - High-performance event schedules, dynamic ticketing, and multi-tier registration pipelines.
+  - Modern dark-mode aesthetic with fluid layout transitions.
+
+### 3. JKLU Sankalp 2027
+- Category: Full-Stack Web Platform
+- Live URL: https://sankalp-27.vercel.app
+- GitHub Repository: https://github.com/Devam759/sankalp-27
+- Technologies: React, TypeScript, Tailwind CSS, Next.js
+- Key Features:
+  - Flagship cultural and community outreach platform.
+  - Program directory, interactive schedule grids, and participant management.
+
+### 4. StitchUp
+- Category: Full-Stack E-Commerce & Service Platform
+- Live URL: https://stitchup-1af69.web.app
+- GitHub Repository: https://github.com/Devam759/StitchUp-Firebase
+- Technologies: MongoDB, Express.js, React, Node.js (MERN), Tailwind CSS
+- Key Features:
+  - On-demand doorstep custom tailoring service marketplace.
+  - Connects clients directly with verified local tailors.
+  - Automated measurement input, booking scheduler, and live progress tracking.
+
+### 5. Pindi Traders
+- Category: B2B Commercial Distribution Portal
+- Live URL: https://pindi-traders.vercel.app
+- GitHub Repository: https://github.com/Devam759/Pindi-Traders
+- Technologies: React, TypeScript, Tailwind CSS, Vite
+- Key Features:
+  - Commercial wholesale catalog website showcasing product specifications and volume quotation requests.
+
+### 6. Browser Vigilant
+- Category: Security & Integrity Tool
+- Live URL: https://browser-vigilant.vercel.app
+- GitHub Repository: https://github.com/Devam759/Browser-Vigilant
+- Technologies: JavaScript, React, Web APIs, Tailwind CSS
+- Key Features:
+  - Assessment integrity monitor tracking tab switches, secondary display activity, and window focus violations.
+
+## Technical Skills & Tooling
+- Programming Languages: JavaScript (ES6+), TypeScript, Python, Dart, SQL, HTML5, CSS3
+- Frontend Libraries & Frameworks: React.js, Next.js (App Router & Pages Router), Tailwind CSS, Framer Motion, Redux Toolkit
+- Backend & Server Technologies: Node.js, Express.js, RESTful API Design, Middleware, JWT Authentication, Webhooks
+- Databases & Cloud: MongoDB, Mongoose ODM, Firebase Firestore, Firebase Realtime Database, Cloudinary CDN
+- Machine Learning & Mobile: Flutter, TensorFlow Lite (TFLite), MobileFaceNet, Prompt Engineering
+- Tools & Environments: Git, GitHub, Docker, Postman, VS Code, Linux, Render, Netlify, Vercel
+
+## Honors & Certifications
+- 4th Place Winner, HACKSTORM 2024 National Hackathon (competed against 70+ engineering teams)
+- Machine Learning Operations (MLOps) for Generative AI - Google (Issued Jun 2025)
+- Generative AI for Everyone - DeepLearning.AI (Issued Jan 2025)
+- Google Prompting Essentials - Google (Issued Jan 2025)
+- Introduction to Git and GitHub - Google (Issued Jan 2025)
+- Programming for Everybody - University of Michigan (Issued Dec 2024)
+
+## Availability for Hire & Collaboration
+Devam Gupta is available for:
+- Software Engineering Internships (Summer & Year-Round)
+- Junior Full-Stack Developer Positions
+- Freelance Web & Mobile Application Development
+- Open-Source Contributions & Hackathons
+Remote work across global timezones and on-site relocation are both supported.

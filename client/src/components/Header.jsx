@@ -11,6 +11,7 @@ const navLinks = [
   { name: 'Timeline', id: 'timeline' },
   { name: 'Volunteering', id: 'cocurricular' },
   { name: 'Certifications', id: 'certifications' },
+  { name: 'FAQ', id: 'faq' },
   { name: 'Contact', id: 'contact' },
 ]
 
